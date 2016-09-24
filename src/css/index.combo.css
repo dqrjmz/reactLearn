@@ -1,0 +1,53 @@
+/*
+combined files : 
+
+index1.css
+*/
+
+/*\5F15\5165css\6A21\5757*/
+
+/*\7F16\7801*/
+
+/*\83B7\53D6\8BBE\5907\4FE1\606F*/
+html{font-size: calc(100vw/6.4)!important;-webkit-text-size-adjust:none;height:100%;}
+@media screen and (min-width: 640px){html {font-size: calc(640px/6.4)!important;} }
+@media screen and (max-width: 320px){html {font-size: calc(320px/6.4)!important;} }
+/*\89C4\8303\76D2\5B50\6A21\578B*/
+*{box-sizing:border-box;}
+*:before,
+*:after{box-sizing:border-box;}
+body{font-family:"Microsoft YaHei","Hiragino Sans GB W3","pingHei","WenQuanYi Micro Hei","Droid Sans Fallback",Arial,sans-serif;height:100%;overflow:hidden;}
+/*\9650\5236\6587\672C\884C\6570*/
+.limit-text-length{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+/*\9875\9762\7ED3\6784*/
+.page{-webkit-transform:-translateY(305%);transform:-translateY(305%);}
+
+
+.container  { 
+  display: -ms-flexbox; 
+  display: -webkit-box; 
+  display: flex;
+  box-shadow:10px 10px #332;
+
+ }
+ 
+
+/*@import 'index-\526F\672C.css';*/
+
+/*\7F16\7801*/
+
+/*\83B7\53D6\8BBE\5907\4FE1\606F*/
+html{font-size: calc(100vw/6.4)!important;-webkit-text-size-adjust:none;height:100%;}
+@media screen and (min-width: 640px){html {font-size: calc(640px/6.4)!important;} }
+@media screen and (max-width: 320px){html {font-size: calc(320px/6.4)!important;} }
+/*\89C4\8303\76D2\5B50\6A21\578B*/
+*{box-sizing:border-box;}
+*:before,
+*:after{box-sizing:border-box;}
+body{font-family:"Microsoft YaHei","Hiragino Sans GB W3","pingHei","WenQuanYi Micro Hei","Droid Sans Fallback",Arial,sans-serif;height:100%;overflow:hidden;}
+/*\9650\5236\6587\672C\884C\6570*/
+.limit-text-length{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+/*\9875\9762\7ED3\6784 css*/
+
+
+ 

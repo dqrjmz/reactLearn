@@ -136,5 +136,7 @@
     1.连通线上仓库和线下仓库的两种方法：
         a：git remote add origin git@github.com:github用户名/仓库名.git && git push -u origin master
         b: git clone
+    2.坑点：
+        a.sublime中传不上去，用户名有验证，ip。。
 
 

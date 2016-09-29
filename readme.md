@@ -1,81 +1,81 @@
-思考：我开发时候，我有哪些痛点？
-    1.有些插件（基于zepto/jquery）用的不熟练，甚至没有用过；上手有成本；
-    2.重复的布局，写交互导致的效率低；
-    3.复杂的业务逻辑问题需要特别谨慎；
-    4.调试上也会有不流畅的问题；
-    5.关于缓存问题对于页面资源加载的影响；
-    6.关于git的操作冲突，建立分支等；
-    7.css样式技巧点不足；
-    8.js；
-    9.结构；
-    10.程序性能问题，可维护问题，可读性问题；
-    11.是否有时间去接触新东西问题；
+#思考：我开发时候，我有哪些痛点？
+    1.有些插件（基于zepto/jquery）用的不熟练，甚至没有用过；上手有成本:  
+    2.重复的布局，写交互导致的效率低；  
+    3.复杂的业务逻辑问题需要特别谨慎；  
+    4.调试上也会有不流畅的问题；  
+    5.关于缓存问题对于页面资源加载的影响；  
+    6.关于git的操作冲突，建立分支等；  
+    7.css样式技巧点不足；  
+    8.js；  
+    9.结构；  
+    10.程序性能问题，可维护问题，可读性问题；  
+    11.是否有时间去接触新东西问题；  
 
 
 
-什么：是什么？
-    1.解决什么问题；
-    2.什么原理解决的；
-    3.怎么用；
-    4.实战；
-    5.坑点；
+##什么：是什么？
+    1.解决什么问题；  
+    2.什么原理解决的；  
+    3.怎么用；  
+    4.实战；  
+    5.坑点；  
 
 
-1.使用webpack搭建一个各种功能的开发环境
-    a.写es6语法代码          √
-    b.写react代码            √
-    c.css厂商前缀            ×
-    d.图片转base64           √
-    e.打开浏览器插件         √
-    f.webpack-dev-server:开启一个nodejs服务器浏览器自动刷新 √
-    g.css文件提取             √
-    h.浏览器自动刷新更能
+###.使用webpack搭建一个各种功能的开发环境
+    a.写es6语法代码          √ 
+    b.写react代码            √ 
+    c.css厂商前缀            × 
+    d.图片转base64           √  
+    e.打开浏览器插件         √  
+    f.webpack-dev-server:开启一个nodejs服务器浏览器自动刷新 √ 
+    g.css文件提取             √ 
+    h.浏览器自动刷新更能 
 
 
-2.react:前端view框架
-    a.每个组件只有一个顶层标签 
-    b. this.props          属性对象  
-    c.this.props.chilren   表示父组件的所有子组件
+### .react:前端view框架
+    -.每个组件只有一个顶层标签  
+    -. `this.props`          属性对象   
+    -.`this.props.chilren`   表示父组件的所有子组件 
 
-2.1.react-router:前端路由
+2.1.`react-router`:前端路由    
 
-2.2.flux:前端架构模式
-    解决问题：
-        a.mvc带来的复杂度的削减；
+2.2.flux:前端架构模式   
+    解决问题：  
+        a.mvc带来的复杂度的削减；   
 
-2.3.redux:JavaScript 状态容器（action,store,reducer）
-    解决的问题：提供可预测化的状态管理
-        a.应用中的state都存在了一个store上
-        b.想要改变state的唯一办法是触发action
-        c.为了描述action怎样改变state，我们需要用reducer函数来描述
-        d.redux只有一个单一的store和一个根级的reducer函数
-        f.一个react应用只有一个根组件
+2.3.redux:JavaScript 状态容器（action,store,reducer）  
+    解决的问题：提供可预测化的状态管理  
+        a.应用中的state都存在了一个store上  
+        b.想要改变state的唯一办法是触发action  
+        c.为了描述action怎样改变state，我们需要用reducer函数来描述  
+        d.redux只有一个单一的store和一个根级的reducer函数  
+        f.一个react应用只有一个根组件  
         
-        三大原则：
-        1.单一数据源；
-        2.state是只读的
-        3.使用纯函数来执行修改
+        三大原则：  
+        1.单一数据源；  
+        2.state是只读的  
+        3.使用纯函数来执行修改  
 
-        action:要做的修改是一个普通对象，{type:'',...}
-            a.Action Creator是一个函数，生成action对象；
-            b.action的写法也是有一定规范的，虽然不是硬性的；
+        action:要做的修改是一个普通对象，{type:'',...}  
+            a.Action Creator是一个函数，生成action对象； 
+            b.action的写法也是有一定规范的，虽然不是硬性的；  
 
 
 
-3.postcss:css文件处理工具
-    a.postcss-cli工具安装
-    b.安装插件auto...
-    c.命令
-        1.postcss --use autoprefixer --dir dist *.css
-        当前目录下的css文件编译到dist目录下
+3.postcss:css文件处理工具  
+    a.postcss-cli工具安装  
+    b.安装插件auto...  
+    c.命令  
+        1.postcss --use autoprefixer --dir dist *.css  
+        当前目录下的css文件编译到dist目录下  
 
- 4.webpack:模块加载器
-    解决问题：
-        a.js代码模块化
-        b.文件依赖
-        d.全局污染
-        f.阅读与维护
-    1.webpack-server-dev：打开的是http://location:8080指向的是文件输出目录
+ 4.webpack:模块加载器  
+    解决问题：  
+        a.js代码模块化  
+        b.文件依赖  
+        d.全局污染  
+        f.阅读与维护  
+    1.webpack-server-dev：打开的是http://location:8080指向的是文件输出目录  
 
     
  5.css-combo:css模块打包工具；

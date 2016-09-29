@@ -27,7 +27,7 @@
     c.css厂商前缀            ×
     d.图片转base64           √
     e.打开浏览器插件         √
-    f.webpack-dev-server:开启一个nodejs服务器浏览器自动刷新 ×
+    f.webpack-dev-server:开启一个nodejs服务器浏览器自动刷新 √
     g.css文件提取             √
     h.浏览器自动刷新更能
 
@@ -41,7 +41,25 @@
 
 2.2.flux:前端架构模式
     解决问题：
-        mvc带来的复杂度的削减；
+        a.mvc带来的复杂度的削减；
+
+2.3.redux:JavaScript 状态容器（action,store,reducer）
+    解决的问题：提供可预测化的状态管理
+        a.应用中的state都存在了一个store上
+        b.想要改变state的唯一办法是触发action
+        c.为了描述action怎样改变state，我们需要用reducer函数来描述
+        d.redux只有一个单一的store和一个根级的reducer函数
+        f.一个react应用只有一个根组件
+        
+        三大原则：
+        1.单一数据源；
+        2.state是只读的
+        3.使用纯函数来执行修改
+
+        action:要做的修改是一个普通对象，{type:'',...}
+            a.Action Creator是一个函数，生成action对象；
+            b.action的写法也是有一定规范的，虽然不是硬性的；
+
 
 
 3.postcss:css文件处理工具
@@ -144,5 +162,7 @@
         a.开发写代码
         b.管理项目
         c.git之间打通
+
+
 
 

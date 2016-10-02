@@ -8,10 +8,11 @@
  import './mod1.js';
 
  // 引入material-ui的react ui组件
- import './material-ui/index.jsx';
+ // import './material-ui/index.jsx';
 
  //引入react组件 
  // import jsx from './index.jsx';
+ import './second';
 
 
  // 引入redux

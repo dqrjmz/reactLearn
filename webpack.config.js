@@ -70,10 +70,11 @@ module.exports = {
     postcss: [autoprefixer({ browsers: ['last 2 versions'] })],
     // 省略文件类型
     resolve: {
-        extensions: ['', '.js', '.json', '.coffee','.css']
+        // 注意需要加  .jsx
+        extensions: ['', '.js', '.jsx', '.json', '.coffee', '.css']
     },
     //源代码
-    devtool:'source-map',
+    devtool: 'source-map',
     // 配置插件
     plugins: [
         //自动生成html

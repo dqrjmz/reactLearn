@@ -50,7 +50,6 @@
         c.为了描述action怎样改变state，我们需要用reducer函数来描述
         d.redux只有一个单一的store和一个根级的reducer函数
         f.一个react应用只有一个根组件
->>>>>>> f04ca6df4389cb2f1425689f2ed0150630067632
         
         三大原则：  
         1.单一数据源；  

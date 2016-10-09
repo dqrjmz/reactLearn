@@ -67,8 +67,9 @@ module.exports = {
         ]
     },
     // postcss处理css自动添加前缀
-    postcss: [autoprefixer({ browsers: ['last 2 versions'] })],
+   // postcss: [autoprefixer({ browsers: ['last 2 versions'] })],
     // 省略文件类型
+    // 模块的简写
     resolve: {
         // 注意需要加  .jsx
         extensions: ['', '.js', '.jsx', '.json', '.coffee', '.css']
@@ -109,6 +110,20 @@ module.exports = {
         // 将公共js打包
         // new CommonsChunkPlugin('js/comm.js')
         //提取公用部分
-        new webpack.optimize.CommonsChunkPlugin('js/common.js')
+        new webpack.optimize.CommonsChunkPlugin('js/common.js'),
+        //高版本的webpack
+        // new webpack.LoaderOptionsPlugin({
+        //     options: {
+        //         postcss: function() {
+        //             return [precss, autoprefixer];
+        //         },
+        //         // devServer: {
+        //         //     contentBase: "./public", //本地服务器所加载的页面所在的目录
+        //         //     colors: true, //终端中输出结果为彩色
+        //         //     historyApiFallback: true, //不跳转
+        //         //     inline: true //实时刷新
+        //         // }
+        //     }
+        // })
     ]
 }

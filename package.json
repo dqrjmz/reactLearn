@@ -5,7 +5,8 @@
   "main": "webpack.config.js",
   "scripts": {
     "build": "webpack --watch --progress --color --config webpack.config.js",
-    "start": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build"
+    "start": "webpack-dev-server --devtool eval --progress --colors --hot --content-base dist",
+    "other":"webpack --watch --progress --color --config webpack.config.dist.js"
   },
   "author": "",
   "license": "ISC",

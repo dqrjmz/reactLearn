@@ -1,14 +1,18 @@
  // es6文件
- // import $ from 'zepto';
- import $ from 'jquery';
+ // import  './es6.js';
+
  // 加载css文件
  import  '../css/index';
  
  // 加载mod1
  import './mod1.js';
 
+ // 引入material-ui的react ui组件
+ // import './material-ui/index.jsx';
+
  //引入react组件 
  // import jsx from './index.jsx';
+ import './second';
 
 
  // 引入redux
@@ -51,6 +55,8 @@
 // console.log( store.getState() ); // { counter: 1 }
 
 
+
+// 导入redux
 import { createStore } from 'redux';
 
 /**
@@ -95,7 +101,12 @@ store.dispatch({ type: 'DECREMENT' });
 store.dispatch({ type: 'jmz' });
  
 
-
+function addTodoAction(text){
+  return {
+    type:'addTodos',
+    text
+  }
+}
  
 
 /*

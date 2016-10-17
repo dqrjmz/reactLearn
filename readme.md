@@ -17,7 +17,7 @@
 
 
 
-什么：是什么？
+##什么：是什么？
     1.解决什么问题；
     2.什么原理解决的；
     3.怎么用；
@@ -25,21 +25,21 @@
     5.坑点；
 
 
-1.使用webpack搭建一个各种功能的开发环境
-    a.写es6语法代码          √
-    b.写react代码            √
-    c.css厂商前缀            ×
-    d.图片转base64           √
-    e.打开浏览器插件         √
-    f.webpack-dev-server:开启一个nodejs服务器浏览器自动刷新 √
-    g.css文件提取             √
-    h.浏览器自动刷新更能
+## 使用webpack搭建一个各种功能的开发环境
+    -.写es6语法代码          √
+    -.写react代码            √
+    -.css厂商前缀            ×
+    -.图片转base64           √
+    -.打开浏览器插件         √
+    -.webpack-dev-server:开启一个nodejs服务器浏览器自动刷新 √
+    -.css文件提取             √
+    -.浏览器自动刷新更能
 
 
-2.react:前端view框架
-    a.每个组件只有一个顶层标签 
-    b. this.props          属性对象  
-    c.this.props.chilren   表示父组件的所有子组件
+## react:前端view框架
+    -.每个组件只有一个顶层标签 
+    -. this.props          属性对象  
+    -.this.props.chilren   表示父组件的所有子组件
 
 2.1.react-router:前端路由
 

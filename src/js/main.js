@@ -12,7 +12,7 @@
 
  // 引入material-ui的react ui组件
  // import './material-ui/index.jsx';
- 
+
  // import convertDate from './lib/convertDate.js';
  // console.log(convertDate(new Date(2014,3,5,3,2,2),'YYYY/MM-DD hh:mm:ss'));
 
@@ -20,41 +20,91 @@
  import React from 'react';
  import ReactDOM from 'react-dom';
 
- import Comment from './components/Comment';
+ class A extends React.Component {
+     constructor(props) {
+         super(props);
 
- ReactDOM.render(<Comment url="../data/data.json"  pollInterval={3000}  />,document.getElementById('page'));
+         this.state = {
+             text: 'text'
+         };
 
-/**
- * 
- */
- // import {ThemeBox} from './components/ThemeBox';
+         this.handleClick = this.handleClick.bind(this);
+         
+     }
+
+     handleClick() {
+         this.setState({ text: ReactDOM.findDOMNode(this.refs.text).innerText + 'dfdr' });
+     }
+
+     componentDidMount(){
+     		  this.setState({text:'ggh'});
+     }
+
+     render() {
+         return ( < div >
+         			<B onBtnClick={this.handleClick} />
+             < span ref = "text" > { this.state.text } < /span> < /div>
+         );
+     }
+ }
+
+ class B extends React.Component {
+     constructor(props) {
+         super(props);
+
+         this.render=this.render.bind(this);
+     }
+
+     render(){
+				return (
+					<div>
+	     		 < input type = "button"
+	             value = "button"
+	             ref = "btn"
+	             onClick = { this.props.onBtnClick}
+	             />
+	     		</div>
+				);
+     }
+ }
+
+ ReactDOM.render( < A / > , document.getElementById('page'));
+
+ //  import {CommentBox} from './components/Comment';
+
+ //  ReactDOM.render(<CommentBox url="../data/data.json"  pollInterval={3000}  />,document.getElementById('page'));
+
+ // /**
+ //  * 
+ //  */
+ //  // import {ThemeBox} from './components/ThemeBox';
  // ReactDOM.render(<ThemeBox />,document.getElementById('page'));
 
 
 
-// class MyC extends React.Component{
-// 		constructor(props){
-// 			super(props);
-// 		}
+ // class MyC extends React.Component{
+ // 		constructor(props){
+ // 			super(props);
+ // 		}
 
-// 		componentWillMount(){
-// 			console.log(this.refs.ref);
-// 		}
+ // 		componentWillMount(){
+ // 			console.log(this.refs.ref);
+ // 		}
 
-// 		componentDidMount(){
-// 			console.log(React.findDOMNode(this.refs.ref));
-// 		}
+ // 		componentDidMount(){
+ // 			console.log(React.findDOMNode(this.refs.ref));
+ // 		}
 
-// 		render(){
-// 			return (
-// 				<div ref="ref">
-// 					jmz
-// 				</div>
-// 				);
-// 		}
-// }
+ // 		render(){
+ // 			return (
+ // 				<div ref="ref">
+ // 					jmz
+ // 				</div>
+ // 				);
+ // 		}
+ // }
 
-// ReactDOM.render(<MyC />,document.body);
+ // ReactDOM.render(<MyC />,document.body);
 
 
  //引入react组件 
@@ -113,16 +163,16 @@
  // import { createStore } from 'redux';
 
  /**
-	* 这是一个 reducer，形式为 (state, action) => state 的纯函数。
-	* 描述了 action 如何把 state 转变成下一个 state。
-	*
-	* state 的形式取决于你，可以是基本类型、数组、对象、
-	* 甚至是 Immutable.js 生成的数据结构。惟一的要点是
-	* 当 state 变化时需要返回全新的对象，而不是修改传入的参数。
-	*
-	* 下面例子使用 `switch` 语句和字符串来做判断，但你可以写帮助类(helper)
-	* 根据不同的约定（如方法映射）来判断，只要适用你的项目即可。
-	*/
+  * 这是一个 reducer，形式为 (state, action) => state 的纯函数。
+  * 描述了 action 如何把 state 转变成下一个 state。
+  *
+  * state 的形式取决于你，可以是基本类型、数组、对象、
+  * 甚至是 Immutable.js 生成的数据结构。惟一的要点是
+  * 当 state 变化时需要返回全新的对象，而不是修改传入的参数。
+  *
+  * 下面例子使用 `switch` 语句和字符串来做判断，但你可以写帮助类(helper)
+  * 根据不同的约定（如方法映射）来判断，只要适用你的项目即可。
+  */
  // function counter(state = 0, action) {
  //   switch (action.type) {
  //   case 'INCREMENT':

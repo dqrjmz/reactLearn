@@ -11,6 +11,10 @@
     10.程序性能问题，可维护问题，可读性问题； 
     11.是否有时间去接触新东西问题；
 
+##前端框架的使用
+    -.jquery框架，jquery插件
+    -.react框架，react组件
+
 
 ##模板
 `一个产品的框架模型，使用不同的填充内容产生出不同的东西，但是结构不会变，变得只是内容` 
@@ -25,7 +29,7 @@
     5.坑点；
 
 
-## 使用webpack搭建一个各种功能的开发环境
+## 使用webpack搭建一个ES6和REACT开发环境
     -.写es6语法代码          √
     -.写react代码            √
     -.css厂商前缀            ×
@@ -37,48 +41,45 @@
 
 
 ## react:前端view框架
-    -.每个组件只有一个顶层标签 
-    -. this.props          属性对象  
-    -.this.props.chilren   表示父组件的所有子组件
 
-2.1.react-router:前端路由
+## react-router:前端路由
 
-2.2.flux:前端架构模式
+## flux:前端架构模式
     解决问题：
-        a.mvc带来的复杂度的削减；
+        -.mvc带来的复杂度的削减；
 
-2.3.redux:JavaScript 状态容器（action,store,reducer）
+## redux:JavaScript 状态容器（action,store,reducer）
     解决的问题：提供可预测化的状态管理
-        a.应用中的state都存在了一个store上
-        b.想要改变state的唯一办法是触发action
-        c.为了描述action怎样改变state，我们需要用reducer函数来描述
-        d.redux只有一个单一的store和一个根级的reducer函数
-        f.一个react应用只有一个根组件
+        -.应用中的state都存在了一个store上
+        -.想要改变state的唯一办法是触发action
+        -.为了描述action怎样改变state，我们需要用reducer函数来描述
+        -.redux只有一个单一的store和一个根级的reducer函数
+        -.一个react应用只有一个根组件
         
         三大原则：  
         1.单一数据源；  
         2.state是只读的  
         3.使用纯函数来执行修改  
-
+    ```
         action:要做的修改是一个普通对象，{type:'',...}  
             a.Action Creator是一个函数，生成action对象； 
             b.action的写法也是有一定规范的，虽然不是硬性的；  
+    ```
 
 
-
-3.postcss:css文件处理工具  
+## postcss:css文件处理工具  
     a.postcss-cli工具安装  
     b.安装插件auto...  
     c.命令  
         1.postcss --use autoprefixer --dir dist *.css  
         当前目录下的css文件编译到dist目录下  
 
- 4.webpack:模块加载器  
+## webpack:模块加载器  
     解决问题：  
-        a.js代码模块化  
-        b.文件依赖  
-        d.全局污染  
-        f.阅读与维护  
+        -.js代码模块化  
+        -.文件依赖  
+        -.全局污染  
+        -.阅读与维护  
     1.webpack-server-dev：打开的是http://location:8080指向的是文件输出目录  
 
     
@@ -114,7 +115,8 @@
         b.各种设备兼容问题
         c.各种坑点
 
-11.es6
+## es6（特性列表）+ecmascript(原型，原型链，作用域，call,apply等)
+```
     module
     1.导出(命名模块 默认模块)
         命名模块导出：export a;
@@ -146,10 +148,9 @@
     变量的结构赋值
         从对象或者数组中提取值对变量进行赋值；
 
-
-
     1.es5中的forEach()方法不会再循环过程中判断，中断循环 for fo 可以
     2.for in会遍历出数组本身的的属性值，for of不会
+```
 
  12.git:项目版本控制工具
     解决的问题：

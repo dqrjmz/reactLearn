@@ -35,3 +35,16 @@ let [a,b]=[1]
 
 ###模块模式方案：
 1.匿名闭包
+
+
+###class
+```
+constructor(){
+    中的this值为类本身
+}
+
+zdyMethod(){
+    中this值为实例对象本身
+}
+```
+

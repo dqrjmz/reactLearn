@@ -1,0 +1,111 @@
+[
+            {
+                "MainId": 682,
+                "ModuleId": 9022,
+                "ModuleDesc": "",
+                "ParentModuleId": 9021,
+                "LineId": 15805,
+                "CityId": 82,
+                "InventoryCount": 0,
+                "Days": 2,
+                "Sort": 0,
+                "MainTitle": "【广东国庆预售】【万人童话梦幻灯光节】住龙门尚天然花海温泉小镇，畅泡温泉，免费水上排球篮球，水果品尝，自选游玩鲁冰花童话王国，水帘洞漂流",
+                "SubTitle": "【广东国庆预售】【尚且有你•约你相惠】住龙门尚天然花海温泉小镇，畅泡温泉，免费水上排球篮球，水果品尝，自选游玩鲁冰花童话王国还有灯光节梦幻来袭，水帘洞漂流",
+                "LineMainTitle": "【广东国庆预售】【万人童话梦幻灯光节】住龙门尚天然花海温泉小镇，畅泡温泉，免费水上排球篮球，水果品尝，自选游玩鲁冰花童话王国，水帘洞漂流",
+                "LineSubTitle": "【广东国庆预售】【尚且有你•约你相惠】住龙门尚天然花海温泉小镇，畅泡温泉，免费水上排球篮球，水果品尝，自选游玩鲁冰花童话王国还有灯光节梦幻来袭，水帘洞漂流",
+                "WirelessTitle": "【广东国庆预售】尚天然花海温泉小镇住宿1晚，凭房卡无限次泡温泉，自选游玩鲁冰花童话王国，水帘洞漂流",
+                "CityPinyin": "huizhou",
+                "CityName": "惠州",
+                "Description": "免费水上排球篮球，水果品尝，自选游玩鲁冰花童话王国还有灯光节梦幻来袭，水帘洞漂流免费水上排球篮球，水果品尝，自选游玩鲁冰花童话王国还有灯光节梦幻来袭，水帘洞漂流",
+                "ExtraSceneryIds": "",
+                "ExtendImageUrl": "",
+                "SelectPic3Path": "",
+                "ImageUrl": "http://pic3.40017.cn/zzy/rimage/2015/03/17/11/oAPcqq_640x320_02.jpg",
+                "AdmountAdvice": "1",
+                "AmountDirect": "369",
+                "LineAmountDirect": "388",
+                "LineAdmountAdvice": "1",
+                "PlatformPrice": [{
+                    "PlatformType": 0,
+                    "AdmountAdvice": "1",
+                    "AmountDirect": "369"
+                }, {
+                    "PlatformType": 2,
+                    "AdmountAdvice": "1",
+                    "AmountDirect": "369"
+                }, {
+                    "PlatformType": 3,
+                    "AdmountAdvice": "1",
+                    "AmountDirect": "369"
+                }, {
+                    "PlatformType": 7,
+                    "AdmountAdvice": "1",
+                    "AmountDirect": "369"
+                }, {
+                    "PlatformType": 9,
+                    "AdmountAdvice": "1",
+                    "AmountDirect": "369"
+                }],
+                "TCPrice": null,
+                "TCPriceByExId": null,
+                "Props": null,
+                "Satisfaction": 0,
+                "IsContainsRed": false,
+                "CreateDate": "2010-11-12 17:32:59",
+                "LineLabel": "790"
+            },
+            {
+                "MainId": 682,
+                "ModuleId": 9022,
+                "ModuleDesc": "",
+                "ParentModuleId": 9021,
+                "LineId": 20049,
+                "CityId": 91,
+                "InventoryCount": 0,
+                "Days": 2,
+                "Sort": 0,
+                "MainTitle": "入住瀑布酒店；游玩生态乐园大峡谷，度假公园茶溪谷（包含小火车和云海索道），还有双份早餐（包房活动套餐不含早，含2张天禅成人门票）",
+                "SubTitle": "【广东国庆预售】精致周边，桂族之选 深圳.东部华侨城瀑布酒店1晚 大侠谷茶溪谷2日游无限次游玩套票（VIP通道至大侠谷乐园）",
+                "LineMainTitle": "入住瀑布酒店+2日游大峡谷&茶溪谷套票+双份早餐",
+                "LineSubTitle": "入住瀑布酒店+2日游大峡谷&茶溪谷套票+双份早餐",
+                "WirelessTitle": "【广东国庆预售】瀑布酒店 大侠谷&茶溪谷2日游套票套餐 双份早餐（包房活动套餐不含早）",
+                "CityPinyin": "shenzhen",
+                "CityName": "深圳",
+                "Description": "免费水上排球篮球，水果品尝，自选游玩鲁冰花童话王国还有灯光节梦幻来袭，水帘洞漂流免费水上排球篮球，水果品尝，自选游玩鲁冰花童话王国还有灯光节梦幻来袭，水帘洞漂流",
+                "ExtraSceneryIds": "",
+                "ExtendImageUrl": "",
+                "SelectPic3Path": "",
+                "ImageUrl": "http://pic3.40017.cn/zzy/rimage/2015/03/17/11/IaWXhS_640x320_02.jpg",
+                "AdmountAdvice": "1",
+                "AmountDirect": "659",
+                "LineAmountDirect": "659",
+                "LineAdmountAdvice": "1",
+                "PlatformPrice": [{
+                    "PlatformType": 0,
+                    "AdmountAdvice": "1",
+                    "AmountDirect": "659"
+                }, {
+                    "PlatformType": 2,
+                    "AdmountAdvice": "1",
+                    "AmountDirect": "659"
+                }, {
+                    "PlatformType": 3,
+                    "AdmountAdvice": "1",
+                    "AmountDirect": "659"
+                }, {
+                    "PlatformType": 7,
+                    "AdmountAdvice": "1",
+                    "AmountDirect": "659"
+                }, {
+                    "PlatformType": 9,
+                    "AdmountAdvice": "1",
+                    "AmountDirect": "659"
+                }],
+                "TCPrice": null,
+                "TCPriceByExId": null,
+                "Props": null,
+                "Satisfaction": 0,
+                "IsContainsRed": false,
+                "CreateDate": "2011-7-12 15:24:06",
+                "LineLabel": "695,790"
+            }]

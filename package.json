@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --watch --progress --color --config webpack.config.js",
     "start": "webpack-dev-server --devtool eval --progress --colors --hot --content-base dist",
-    "other":"webpack --watch --progress --color --config webpack.config.dist.js"
+    "other": "webpack --watch --progress --color --config webpack.config.dist.js"
   },
   "author": "",
   "license": "ISC",
@@ -54,6 +54,7 @@
     "react-router": "^2.8.1",
     "react-tap-event-plugin": "^1.0.0",
     "redux": "^3.6.0",
+    "remarkable": "^1.7.1",
     "touch": "^1.0.0",
     "weinre": "^2.0.0-pre-I0Z7U9OV",
     "zepto": "^1.2.0"

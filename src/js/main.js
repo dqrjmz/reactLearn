@@ -20,7 +20,9 @@
  import React from 'react';
  import ReactDOM from 'react-dom';
 
- class A extends React.Component {
+ import './index'
+
+/* class A extends React.Component {
      constructor(props) {
          super(props);
 
@@ -47,7 +49,6 @@
          );
      }
  }
-
  class B extends React.Component {
      constructor(props) {
          super(props);
@@ -67,9 +68,7 @@
 				);
      }
  }
-
- ReactDOM.render( < A / > , document.getElementById('page'));
-
+ ReactDOM.render( < A / > , document.getElementById('page'));*/
  //  import {CommentBox} from './components/Comment';
 
  //  ReactDOM.render(<CommentBox url="../data/data.json"  pollInterval={3000}  />,document.getElementById('page'));

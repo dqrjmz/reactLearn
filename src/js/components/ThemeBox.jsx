@@ -46,7 +46,6 @@ import Tool from '../lib/platform';
     }
 
     render() {
-
     		let liList=	this.state.data.map((el)=>{
 			    		return (
 			    				<li>

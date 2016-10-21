@@ -1,5 +1,5 @@
  // es6文件
- // import  './es6.js';
+ import  './es6.js';
 
 
  /*

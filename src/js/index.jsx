@@ -1,79 +1,82 @@
-// react文件
 import React from 'react';
 import ReactDOM from 'react-dom';
-import style from '../css/index1.css';
-// import $ from 'jquery';
-// import css from '../css/index.css';
-  /*
-    总结：
-    1.获取组件属性的值：this.props对象
-    2.组件是一个状态机器
-    3.组件的声明周期
-    4.获取组件状态的值：this.state对象
-    5.组件并不是真实dom，而是存在内存当中的数据结构，叫virtual Dom
-    6.this.props与this.state的区别
-      this.props:用户一旦定义不能改变
-      this.state:随时改变的值
-    7.组件的生命周期
-    8.{}一个花括号，表示这个一段js代码
- */
 
+class Button extends React.Component{
+  constructor(props){
+    super(props);
 
-
-var Button = React.createClass({
-  getInitialState: function() {
-    return {
+    this.state={
       data:0
     };
-  },
-  setNewNumber: function() {
+
+    this.setNewNumber=this.setNewNumber.bind(this);
+  }
+  // 定义这个组件的默认属性
+   // static defaultProps={
+   //    name:'jmz'
+   //  };
+   //  static propTypes={
+   //      name: React.PropTypes.string.isRequired
+   //  }; 
+   
+  setNewNumber() {
     this.setState({data: this.state.data + 1})
-  },
-  render: function () {
+  }
+  render() {
       return (
          <div>
-            <button onClick = {this.setNewNumber}>INCREMENT</button>
+            <input onClick = {this.setNewNumber} value="INCREMENT" type="button" />
+            <span>{this.props.name}</span>
             <Content myNumber = {this.state.data}></Content>
          </div>
       );
     }
-})
-var Content = React.createClass({
-  componentWillMount:function() {
-      console.log('Component WILL MOUNT!')
-  },
-  componentDidMount:function() {
-       console.log('Component DID MOUNT!')
-  },
-  componentWillReceiveProps:function(newProps) {
-        console.log('Component WILL RECIEVE PROPS!')
-  },
-  shouldComponentUpdate:function(newProps, newState) {
-        return true;
-  },
-  componentWillUpdate:function(nextProps, nextState) {
-        console.log('Component WILL UPDATE!');
-  },
-  componentDidUpdate:function(prevProps, prevState) {
-        console.log('Component DID UPDATE!')
-  },
-  componentWillUnmount:function() {
-         console.log('Component WILL UNMOUNT!')
-  },
+}
 
-    render: function () {
+// Button.defaultProps={
+//   name:'jay'
+// }
+
+// Button.propTypes={
+//   name:React.PropTypes.string.isRequired
+// }
+
+class Content extends React.Component{
+  componentWillMoun() {
+      console.log('Component WILL MOUNT!')
+  }
+  componentDidMount() {
+       console.log('Component DID MOUNT!')
+  }
+  componentWillReceiveProp(newProps) {
+        console.log('Component WILL RECIEVE PROPS!')
+  }
+  shouldComponentUpdate(newProps, newState) {
+        return true;
+  }
+  componentWillUpdate(nextProps, nextState) {
+        console.log('Component WILL UPDATE!');
+  }
+  componentDidUpdate(prevProps, prevState) {
+        console.log('Component DID UPDATE!')
+  }
+  componentWillUnmount() {
+         console.log('Component WILL UNMOUNT!')
+  }
+
+    render () {
       return (
         <div>
           <h3>{this.props.myNumber}</h3>
         </div>
       );
     }
-});
+}
 ReactDOM.render(
    <div>
       <Button />
    </div>,
-  document.body
+  document.getElementById('page')
 );
 
 

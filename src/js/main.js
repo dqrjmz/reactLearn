@@ -1,11 +1,20 @@
  // es6文件
- import  './es6.js';
+ // import  './es6.js';
 
 
- /*
-	 加载css文件
-	 加载mod1
-	 移动端模板
+ // import '../css/test'
+ import React from 'react';
+ import ReactDOM from 'react-dom';
+
+
+ 
+
+ // import './index';
+
+  /*
+   加载css文件
+   加载mod1
+   移动端模板
  */
  // import '../css/index';
  // import './mod1.js';
@@ -16,59 +25,53 @@
  // import convertDate from './lib/convertDate.js';
  // console.log(convertDate(new Date(2014,3,5,3,2,2),'YYYY/MM-DD hh:mm:ss'));
 
+ /* class A extends React.Component {
+      constructor(props) {
+          super(props);
 
- import React from 'react';
- import ReactDOM from 'react-dom';
+          this.state = {
+              text: 'text'
+          };
 
- import './index'
+          this.handleClick = this.handleClick.bind(this);
+          
+      }
 
-/* class A extends React.Component {
-     constructor(props) {
-         super(props);
+      handleClick() {
+          this.setState({ text: ReactDOM.findDOMNode(this.refs.text).innerText + 'dfdr' });
+      }
 
-         this.state = {
-             text: 'text'
-         };
+      componentDidMount(){
+            this.setState({text:'ggh'});
+      }
 
-         this.handleClick = this.handleClick.bind(this);
-         
-     }
+      render() {
+          return ( < div >
+                <B onBtnClick={this.handleClick} />
+              < span ref = "text" > { this.state.text } < /span> < /div>
+          );
+      }
+  }
+  class B extends React.Component {
+      constructor(props) {
+          super(props);
 
-     handleClick() {
-         this.setState({ text: ReactDOM.findDOMNode(this.refs.text).innerText + 'dfdr' });
-     }
+          this.render=this.render.bind(this);
+      }
 
-     componentDidMount(){
-     		  this.setState({text:'ggh'});
-     }
-
-     render() {
-         return ( < div >
-         			<B onBtnClick={this.handleClick} />
-             < span ref = "text" > { this.state.text } < /span> < /div>
-         );
-     }
- }
- class B extends React.Component {
-     constructor(props) {
-         super(props);
-
-         this.render=this.render.bind(this);
-     }
-
-     render(){
-				return (
-					<div>
-	     		 < input type = "button"
-	             value = "button"
-	             ref = "btn"
-	             onClick = { this.props.onBtnClick}
-	             />
-	     		</div>
-				);
-     }
- }
- ReactDOM.render( < A / > , document.getElementById('page'));*/
+      render(){
+        return (
+          <div>
+           < input type = "button"
+               value = "button"
+               ref = "btn"
+               onClick = { this.props.onBtnClick}
+               />
+          </div>
+        );
+      }
+  }
+  ReactDOM.render( < A / > , document.getElementById('page'));*/
  //  import {CommentBox} from './components/Comment';
 
  //  ReactDOM.render(<CommentBox url="../data/data.json"  pollInterval={3000}  />,document.getElementById('page'));
@@ -82,25 +85,25 @@
 
 
  // class MyC extends React.Component{
- // 		constructor(props){
- // 			super(props);
- // 		}
+ //     constructor(props){
+ //       super(props);
+ //     }
 
- // 		componentWillMount(){
- // 			console.log(this.refs.ref);
- // 		}
+ //     componentWillMount(){
+ //       console.log(this.refs.ref);
+ //     }
 
- // 		componentDidMount(){
- // 			console.log(React.findDOMNode(this.refs.ref));
- // 		}
+ //     componentDidMount(){
+ //       console.log(React.findDOMNode(this.refs.ref));
+ //     }
 
- // 		render(){
- // 			return (
- // 				<div ref="ref">
- // 					jmz
- // 				</div>
- // 				);
- // 		}
+ //     render(){
+ //       return (
+ //         <div ref="ref">
+ //           jmz
+ //         </div>
+ //         );
+ //     }
  // }
 
  // ReactDOM.render(<MyC />,document.body);
@@ -212,8 +215,8 @@
 
 
  /*
-	es6：RegExp
-	*/
+  es6：RegExp
+  */
  // let iphoneReg=new RegExp(/xyZ/,'ig');
  // console.log(iphoneReg.test('xyz'));
  // console.log(new RegExp(/xyZ/,'ig').flags);  //获取修饰符
@@ -221,15 +224,15 @@
  // console.log('xyz'.match(/xyz/ig));
 
  /*
-	测试热加载
-	*/
+  测试热加载
+  */
  // console.log($);
  // alert('dfddfdfdfffdf');
  //console.log('dfdfddfdfdfdfdjmzffgfgdf'); 
 
  /*
-	Promise写的异步回调
-	*/
+  Promise写的异步回调
+  */
  // new Promise((success,def) => {
  //     $.ajax({
  //         url:'http://api.17u.cn/hotelservices/HotelPriceHandler.ashx?HotelId=135936&ComeDate=2016-09-05&LeaveDate=2016-09-6&RefIdType=1&Refid=0&elres=1&Plant=1&IsByPromo=1&isOnceShowAll=true&IsShowAllGuarantee=1&pic=1&AlliancePlatId=0&AllianceRefid=0&ResFormat=json&iid=1473074946792&_=1473074946634',

@@ -51,3 +51,7 @@ zdyMethod(){
 }
 ```
 
+##知识点
+1.es5中的forEach()方法不会再循环过程中判断，中断循环 for fo 可以
+2.for in会遍历出数组本身的的属性值，for of不会
+

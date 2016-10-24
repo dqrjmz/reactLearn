@@ -42,22 +42,22 @@
 
 
 ##什么：是什么？
-    1.解决什么问题；
-    2.什么原理解决的；
-    3.怎么用；
-    4.实战；
-    5.坑点；
+1.解决什么问题；
+2.什么原理解决的；
+3.怎么用；
+4.实战；
+5.坑点；
 
 
 ##使用webpack搭建一个ES6和REACT开发环境
-    -.写es6语法代码          √
-    -.写react代码            √
-    -.css厂商前缀            ×
-    -.图片转base64           √
-    -.打开浏览器插件         √
-    -.webpack-dev-server:开启一个nodejs服务器浏览器自动刷新 √
-    -.css文件提取             √
-    -.浏览器自动刷新更能
+- 写es6语法代码          √
+- 写react代码            √
+- css厂商前缀            ×
+- 图片转base64           √
+- 打开浏览器插件         √
+- webpack-dev-server:开启一个nodejs服务器浏览器自动刷新 √
+- css文件提取             √
+- 浏览器自动刷新更能
 
 
 
@@ -70,38 +70,38 @@
         -.mvc带来的复杂度的削减；
 
 ## redux:JavaScript 状态容器（action,store,reducer）
-    解决的问题：提供可预测化的状态管理
-        -.应用中的state都存在了一个store上
-        -.想要改变state的唯一办法是触发action
-        -.为了描述action怎样改变state，我们需要用reducer函数来描述
-        -.redux只有一个单一的store和一个根级的reducer函数
-        -.一个react应用只有一个根组件
+*解决的问题：提供可预测化的状态管理*
+- 应用中的state都存在了一个store上
+- 想要改变state的唯一办法是触发action
+- 为了描述action怎样改变state，我们需要用reducer函数来描述
+- redux只有一个单一的store和一个根级的reducer函数
+- 一个react应用只有一个根组件
         
-        三大原则：  
-        1.单一数据源；  
-        2.state是只读的  
-        3.使用纯函数来执行修改  
-    ```
-        action:要做的修改是一个普通对象，{type:'',...}  
-            a.Action Creator是一个函数，生成action对象； 
-            b.action的写法也是有一定规范的，虽然不是硬性的；  
-    ```
+三大原则：  
+1.单一数据源；  
+2.state是只读的  
+3.使用纯函数来执行修改  
+```
+action:要做的修改是一个普通对象，{type:'',...}  
+    a.Action Creator是一个函数，生成action对象； 
+    b.action的写法也是有一定规范的，虽然不是硬性的；  
+```
 
 
 ## postcss:css文件处理工具  
-    a.postcss-cli工具安装  
-    b.安装插件auto...  
-    c.命令  
-        1.postcss --use autoprefixer --dir dist *.css  
-        当前目录下的css文件编译到dist目录下  
+- postcss-cli工具安装  
+- 安装插件auto...  
+- 命令  
+1.postcss --use autoprefixer --dir dist *.css  
+**当前目录下的css文件编译到dist目录下**
 
 ## webpack:模块加载器  
-    解决问题：  
-        -.js代码模块化  
-        -.文件依赖  
-        -.全局污染  
-        -.阅读与维护  
-    1.webpack-server-dev：打开的是http://location:8080指向的是文件输出目录  
+**解决问题**
+- js代码模块化  
+- 文件依赖  
+- 全局污染  
+- 阅读与维护  
+1.webpack-server-dev：打开的是http://location:8080指向的是文件输出目录  
 
     
  5.css-combo:css模块打包工具；

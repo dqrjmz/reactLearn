@@ -15,4 +15,11 @@ GIT工具安装；
     1.使用git@地址进行clone
     2.见[方法二](http://www.cnblogs.com/ballwql/p/3462104.html)
 
+##创建远程分支
+```
+git branch <namn>           创建分支
+git push origin <name>      将分支push到远程
+git push origin :<name>     将分支delete从远程
+```
+
 

@@ -2,7 +2,7 @@
  * @param date:日期对象 format:日期生成的格式[YYYY/MM/DD hh:mm:ss]
  * @return str这个格式的日期字符串
  */
-export default function convertDate(date, format) {
+ function convertDate(date, format) {
     let str = format;
     const o = {
         'M+': date.getMonth() + 1,
@@ -13,7 +13,7 @@ export default function convertDate(date, format) {
     };
     if (/(Y+)/.test(format)) {
         str = str.replace(RegExp.$1,
-                (date.getFullYear().toString()).substr(4 - RegExp.$1.length));
+            (date.getFullYear().toString()).substr(4 - RegExp.$1.length));
     }
 
     for (const k in o) { // eslint-disable-line
@@ -26,3 +26,18 @@ export default function convertDate(date, format) {
 
     return str;
 }
+/**
+ * 获取连续天数的日期
+ * @param { num}  第几天离开
+ */
+ function loopTwoDays(num) {
+    let date = new Date(),
+        leaveDateObj = new Date(date.getTime() + 3600 * 24 * 1000*num),
+        startTime=convertDate(date,'YYYY-MM-DD'),
+        leaveTime=convertDate(leaveDateObj,'YYYY-MM-DD');
+
+        return startTime+'&'+leaveTime;
+}
+
+
+export {convertDate,loopTwoDays}

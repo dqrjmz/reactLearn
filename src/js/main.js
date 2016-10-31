@@ -8,6 +8,9 @@
 
 
  
+ import {convertDate,loopTwoDays} from './lib/convertDate.js';
+
+console.log(loopTwoDays(2))
 
  // import './index';
 

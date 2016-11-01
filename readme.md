@@ -1,6 +1,6 @@
 #思考：我们作为web前端前端开发，我们在开发哪些东西？
 - web站点【web应用程序（应用型的站点）】pc端
-- web站点【webapp】移动端(微信端，浏览器端（m端），app端，qq端)
+- web站点【webapp】移动端(微信端，浏览器端（m端），app端，qq端，微信小程序)
 - 混合应用程序【hybrid app】移动端
 - 原生开发【native app】 移动端
 - react-native vue-vuex等

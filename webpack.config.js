@@ -21,6 +21,7 @@ var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 
 
 // 生成的文件路径相对于输出的路径
+// 这个是master分支
 
 module.exports = {
     //入口文件" 

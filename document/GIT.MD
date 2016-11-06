@@ -13,7 +13,7 @@ GIT工具安装；
     **解决方案：**
     1.使用git@地址进行clone
     2.见[方法二](http://www.cnblogs.com/ballwql/p/3462104.html)
-- 本地分支与远程分支进行关联
+- 本地分支与远程分支进行关联[参考链接](http://www.cnblogs.com/aleafo/p/5807301.html)
   1.git branch --set-upstream branch-name origin/branch-name 
 - 从分支创建的一开始就与远程分支关联
   1.git checkout -b branch-name origin/branch-name
@@ -168,9 +168,9 @@ git remote   进行这些主机名的管理
 
         查看当前分支数量与名称：
         git branch
-    删除：
+    删除本地分支：
         git branch -d 分支名
-    切换：
+    切换本地分支：
         git checkout 分支名
     合并：
         git merge 分支 名

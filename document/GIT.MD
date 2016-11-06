@@ -1,26 +1,29 @@
 #版本控制工具
 
-
 #GIT
 GIT工具安装；  
 命令行的使用； 
 
 ##问题点
--.本地仓库映射到远程仓库；
+- 本地仓库映射到远程仓库；
     -解决方案：
     1.在远程服务器建立仓库，然后克隆
     2.本地建立仓库，使用 git remote add origin master [仓库地址](https://github.com/dqrjmz/reactLearn.git)
--.将本地仓库提交到远程仓库不用输入用户名和密码的办法：
-    -解决方案：
+- 将本地仓库提交到远程仓库不用输入用户名和密码的办法：
+    **解决方案：**
     1.使用git@地址进行clone
     2.见[方法二](http://www.cnblogs.com/ballwql/p/3462104.html)
+- 本地分支与远程分支进行关联[参考链接](http://www.cnblogs.com/aleafo/p/5807301.html)
+  1.git branch --set-upstream branch-name origin/branch-name 
+- 从分支创建的一开始就与远程分支关联
+  1.git checkout -b branch-name origin/branch-name
 
 ##git的使用
 ```
+配置自己的git仓库
 git --config配置自己的git仓库门牌号
 git --config user.name
 git --config user.email
-
 
 
 创建目录，切换目录
@@ -63,7 +66,6 @@ git diff
 查看历史记录
 git log
 查看过往的
-
 
 返回上个版本方式
 git reset --hard head commit id 或者 git reset --hard head^[上一版] git reset --hard head^^[上两版]
@@ -119,8 +121,6 @@ git fetch
 git pull 
 git push
 
-
-
 从远程主机克隆一个版本库过来
 git clone 版本库网址    他会有一个默认的目录名
 或者自定义
@@ -148,14 +148,12 @@ git remote   进行这些主机名的管理
   -u 参数：本地与远程的关联，并且内容的推送    
 
 
-  从远程仓库克隆
+5.从远程仓库克隆
   1.最好先有github仓库，再从github克隆到本地
   git clone git@github.com:dqrjmz/gitlearn.git
   所以，要想克隆一个仓库必须先知道他的仓库地址
 
-
-
-  管理分支：
+6.管理分支：
   分支的
     创建：
         创建分支就是把当前的head指针指向新创建分支上去；
@@ -169,12 +167,17 @@ git remote   进行这些主机名的管理
 
         查看当前分支数量与名称：
         git branch
-    删除：
+    删除本地分支：
         git branch -d 分支名
-    切换：
+    切换本地分支：
         git checkout 分支名
     合并：
         git merge 分支名
 ```
+
+
+
+
+ 
 
 

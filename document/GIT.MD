@@ -64,7 +64,6 @@ git diff
 git log
 查看过往的
 
-
 返回上个版本方式
 git reset --hard head commit id 或者 git reset --hard head^[上一版] git reset --hard head^^[上两版]
 

@@ -19,6 +19,8 @@ var babelpolyfill = require("babel-polyfill");
 // 提取公共脚本
 var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 
+// 这个是develop分支
+
 
 // 生成的文件路径相对于输出的路径
 module.exports = {

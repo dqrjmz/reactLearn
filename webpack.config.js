@@ -19,10 +19,9 @@ var babelpolyfill = require("babel-polyfill");
 // 提取公共脚本
 var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 
+// 这个是develop分支
 
 // 生成的文件路径相对于输出的路径
-// 这个是master分支
-
 module.exports = {
     //入口文件" 
     /*
@@ -34,7 +33,7 @@ module.exports = {
     */
     //自动刷新
     //方式一：
-    entry: ['webpack/hot/dev-server.js', 'webpack-dev-server/client?http://localhost:8080', './src/js/main.js'],
+    entry: ['webpack/hot/dev-server.js', 'webpack-dev-server/client?http://localhost:8080', './src/js/develop.js'],
 
     //?方式二：添加<script src="http://localhost:8080/webpack-dev-server.js"></script>
     //entry: ['./src/js/main.js'],
@@ -64,7 +63,7 @@ module.exports = {
         ]
     },
     // postcss处理css自动添加前缀
-   // postcss: [autoprefixer({ browsers: ['last 2 versions'] })],
+    // postcss: [autoprefixer({ browsers: ['last 2 versions'] })],
     // 省略文件类型
     // 模块的简写
     resolve: {

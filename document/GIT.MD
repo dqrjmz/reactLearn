@@ -173,7 +173,7 @@ git remote   进行这些主机名的管理
     切换本地分支：
         git checkout 分支名
     合并：
-        git merge 分支 名
+        git merge 分支名
 ```
 
 

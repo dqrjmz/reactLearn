@@ -41,4 +41,4 @@ let a={c:1};
  fn1.call(a,1,2);
  fn1.apply(a,[1,2]);
 
- Array.prototype.
+ 

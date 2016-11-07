@@ -18,6 +18,12 @@ GIT工具安装；
 - 从分支创建的一开始就与远程分支关联
   1.git checkout -b branch-name origin/branch-name
 
+##总结
+- 本地仓库与远程仓库映射
+- 本地分支与远程分支映射
+- 版本回退
+- 本地提交，远程同步（pull push）
+
 ##git的使用
 ```
 配置自己的git仓库

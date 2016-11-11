@@ -1,17 +1,12 @@
-   // es6文件
-   // import  './es6.js';
-
-
-   // import '../css/test'
    import React from 'react';
    import ReactDOM from 'react-dom';
 
 
 
-   import { convertDate, loopTwoDays } from './lib/convertDate.js';
+   //import { convertDate, loopTwoDays } from './lib/convertDate.js';
 
-
-
+   // es6文件
+   // import  './es6.js';
    // import './index';
 
    /*

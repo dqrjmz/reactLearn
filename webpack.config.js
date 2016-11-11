@@ -32,7 +32,7 @@ module.exports = {
     */
     //自动刷新
     //方式一：
-    entry: ['webpack/hot/dev-server.js', 'webpack-dev-server/client?http://localhost:8080', './src/js/develop.js'],
+    entry: ['webpack/hot/dev-server.js', 'webpack-dev-server/client?http://localhost:8080', './src/js/one.js'],
 
     //?方式二：添加<script src="http://localhost:8080/webpack-dev-server.js"></script>
     //entry: ['./src/js/main.js'],
@@ -76,9 +76,9 @@ module.exports = {
         //自动生成html
         new HtmlWebpackPlugin({
             // 生成的html路径
-            filename: 'html/index.html',
+            filename: 'html/main.html',
             //html模板路径,根据src源代码生成的html     
-            template: './src/html/index.html',
+            template: './src/html/main.html',
             inject: true, //允许插件修改哪些内容，包括head与body             
             hash: true, //为静态资源生成hash值             
             minify: { //压缩HTML文件               
@@ -90,7 +90,7 @@ module.exports = {
         new ExtractTextPlugin("css/style.css"),
         //打开浏览器插件 
         new OpenBrowserPlugin({
-            url: 'http://localhost:8080/html'
+            url: 'http://localhost:8080/html/main.html'
         }),
         //给打包后的文档头部添加声明
         new webpack.BannerPlugin(banner),

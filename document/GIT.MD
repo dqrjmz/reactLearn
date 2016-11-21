@@ -8,18 +8,29 @@ GIT工具安装；
 - 本地仓库映射到远程仓库?
     -解决方案：
     1.在远程服务器建立仓库，然后克隆
-    2.本地建立仓库，使用 git remote add origin master [仓库地址](https://github.com/dqrjmz/reactLearn.git)
+    2.本地建立仓库，使用 git remote add origin master [仓库地址](https://github.com/dqrjmz/reactLearn.git),并提交本地内容到本地仓库，再同步
+
 - 将本地仓库提交到远程仓库不用输入用户名和密码的办法?
-**解决方案：**
+    -解决方案：
     1.使用git@地址进行clone
     2.见[方法二](http://www.cnblogs.com/ballwql/p/3462104.html)
+
 - 本地分支与远程分支进行关联?
   [参考链接](http://www.cnblogs.com/aleafo/p/5807301.html)
   1.git branch --set-upstream branch-name origin/branch-name 
-- 从分支创建的一开始就与远程分支关联?
-  1.git checkout -b branch-name origin/branch-name
+- 从分支创建的一开始就与远程分支关联?git checkout -b branch-name origin/branch-name
+
 - 怎样回退某次远程提交？
   [参考链接](http://blog.mtxcxin.cn/blog/git如何回滚远程仓库.html)
+
+- 合并时冲突
+   1.[方案地址]https://www.git-tower.com/learn/git/ebook/cn/command-line/advanced-topics/merge-conflicts
+
+- git bash 出现vim的时候怎么退出？
+   1.如果是输出状态，首先Esc退出输入状态，然后Shift+;，再输入q!或wq!（不保存改动，wq!是保存文件的写入修改）退出
+
+
+
 
 ##总结
 - 本地仓库与远程仓库映射

@@ -1,1 +1,13 @@
-body::after{content:'';display:block;height:100px;width:100%;background:red}
+body{height:100%;width:100%;padding:0;margin:0;}
+.clearfix:after{content:'';display:block;clear:both;height:0;visibility:hidden}
+[data-index="1"] li{width:100%}
+[data-index="2"] li{width:50%}
+[data-index="3"] li{width:33.3333%}
+[data-index="4"] li{width:25%}
+[data-index="5"] li{width:20%}
+.nav-con li{ padding:5px 10px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;float:left;list-style:none; }
+.nav-con span{color:#333;background:#fefefe;font:16px '微软雅黑';display:block;}
+.nav-con .active span{color:red;}
+
+
+#root{width:100px;height:100px;position:absolute;left:0;top:0;background:red;}

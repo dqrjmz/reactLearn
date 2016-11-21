@@ -17,7 +17,7 @@
 - className                 类的定义
 - style={{width: width}}    元素css样式定义
 - this.setState({data:data-1},()=>{})  改变组件状态
-- this.refs.refName         获取节点
+- this.refs.refName         获取dom的节点
 - ReactDOM.findDOMNode(this.refs.refname)  将react节点转换为dom节点
 - 组件的状态就是数据，数据变化就是状态变化；这是state
 - 组件中需要配置的项设为属性，porps,可以影响state的变化
@@ -34,15 +34,15 @@
   
 
 ##总结：
-    1.获取组件属性的值：this.props对象（属性是定义默认和使用组件时传入）
-    2.组件是一个状态机器
-    3.组件的声明周期
-    4.获取组件状态的值：this.state对象
-    5.组件并不是真实dom，而是存在内存当中的数据结构，叫virtual Dom
-    6.this.props与this.state的区别
-      -this.props:用户一旦定义不能改变
-      -this.state:随时改变的值
-    7.组件的生命周期
-    8.{}一个花括号，表示这个一段js代码
-    9.react组价中的标签不能不闭合
-    10.import 中导入的模块【自定义的】，必须是路径，否则not find;
+1.获取组件属性的值：this.props对象（属性是定义默认和使用组件时传入）
+2.组件是一个状态机器
+3.组件的声明周期
+4.获取组件状态的值：this.state对象
+5.组件并不是真实dom，而是存在内存当中的数据结构，叫virtual Dom
+6.this.props与this.state的区别
+  -this.props:用户一旦定义不能改变
+  -this.state:随时改变的值
+7.组件的生命周期
+8.{}一个花括号，表示这个一段js代码，{{}}表示样式 
+9.react组价中的标签不能不闭合
+10.import 中导入的模块【自定义的】，必须是路径，否则not find;

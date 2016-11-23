@@ -1,7 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import '../css/test.css';
-import './main.js'
+
+
+
 
 
 // import UnlimitedMarquee from 'ks-unlimited-marquee';
@@ -34,8 +36,8 @@ import './main.js'
 //   }
 // }
 
-// ReactDOM.render(<Demo/>, document.querySelector('#root'));
-// //导航ul
+//ReactDOM.render(<Demo/>, document.querySelector('#root'));
+//导航ul
 // class NavULBoxCompontent extends Component{
 // 	constructor(props){
 // 		super(props);

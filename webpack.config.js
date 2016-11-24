@@ -102,8 +102,6 @@ module.exports = {
                 NODE_ENV: JSON.stringify("production")
             }
         }),
-        // 将公共js打包
-        // new CommonsChunkPlugin('js/comm.js')
         //提取公用部分
         new webpack.optimize.CommonsChunkPlugin('js/common.js'),
         //高版本的webpack

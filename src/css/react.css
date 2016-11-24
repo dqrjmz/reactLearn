@@ -1,0 +1,54 @@
+@charset "utf-8";
+html{font-size: calc(100vw/6.4)!important;-webkit-text-size-adjust:none;}
+@media screen and (min-width: 640px){html {font-size: calc(640px/6.4)!important;} }
+@media screen and (max-width: 320px){html {font-size: calc(320px/6.4)!important;} }
+
+.body{position:relative;overflow-x:hidden;height:100%;}
+#root{max-width: 640px;margin: 0 auto;font-family:"Microsoft YaHei","Hiragino Sans GB W3","pingHei","WenQuanYi Micro Hei","Droid Sans Fallback",Arial,sans-serif;}
+#root img{display: block;width: 100%;height:100%;}
+#root a{display:block;}
+footer{background:none;padding:0;}
+.none{display:none;}
+.show{display:block;}
+.limit-text-length{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+
+.baokuan .bk-nav li{float:left;height:.7rem;background:#dd470b;width:50%;text-align:center;line-height:.7rem;font-size:.28rem;color:#f8a35d;}
+.baokuan .bk-nav .active{background:#ff9640;color:#90180c;}
+.baokuan .bk-content{padding:0 .2rem;background:#ff9640;box-sizing:border-box;position:relative;}
+
+.baokuan .bk-content>.active{display:block;}
+.baokuan .bk-content {background:#ff9640;padding:.2rem .2rem .01rem .2rem;}
+.baokuan .bk-content  a{display:block;margin-bottom:.2rem;}
+.baokuan .bk-content .pro_img{position: relative;}
+.baokuan .bk-content img{width:100%;height:3.2rem;}
+.baokuan .bk-content .pos_city{position:absolute;padding:.05rem .2rem;background:rgba(0,0,0,.7);font-size:.24rem;color:#fff;top:.2rem;left:.2rem;border-radius:.4rem;}
+.baokuan .bk-content .eleven_logo{width:.76rem;height:.47rem;background:url(../images/elevn.png);background-size:cover;position:absolute;right:.2rem;top:.2rem;}
+.baokuan .bk-content .pro_title{padding:.1rem .2rem;background:rgba(0,0,0,.7);font-size:.24rem;color:#fff;position:absolute;left:0;bottom:0;width:100%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;box-sizing:border-box;}
+.baokuan .bk-content .info{height:1rem;background:#fff;}
+.baokuan .bk-content  .info .pro_description{display:block;width:65%;float:left;height:100%;color:#333;font-size:.28rem;padding:.1rem .4rem .1rem .2rem;box-sizing:border-box;}
+.baokuan .bk-content  .info .pro_description b{color:#333;font-size:.28rem;}
+.baokuan .bk-content  .info .pro_price{display:block;width:35%;float:left;background:#f43b4f;height:100%;font-size:.36rem;font-weight:bold;color:#fff;position:relative;}
+.baokuan .bk-content  .info .pro_price::before{content:'秒杀价';font-size:.24rem;font-weight:lighter;position:absolute;top:.05rem;left:.1rem;}
+.baokuan .bk-content  .info p{position:absolute;bottom:-.1rem;left:.1rem;}
+.baokuan .bk-content  .info  strong{font-size:.6rem;}
+.baokuan .bk-content  .info b{font-weight:lighter;font-size:.24rem;}
+ 
+.hot-hotel .nav{width:100%;height:.68rem;position:relative;z-index:2;}
+.hot-hotel .nav nav{width:100%;height:.68rem;background:#ff9640;position:relative;}
+.hot-hotel .nav nav::after{content:'';position:absolute;height:.08rem;width:100%;background:rgba(0,0,0,.3);left:0;bottom:0;z-index: 5;}
+.hot-hotel .nav nav b::after{content:'';background:url(../images/arrow.png);right:0;top:0;bottom:0;left:0;margin:auto;width:.31rem;height:.31rem;position:absolute;background-size:cover;}
+.hot-hotel .nav nav b{position:absolute;width:.68rem;height:.68rem;background:#a64b00;right:0;top:0;z-index: 2;}
+.hot-hotel .nav nav b.rotateZ{-webkit-transform:rotateZ(180deg);-ms-transform:rotateZ(180deg);-o-transform:rotateZ(180deg);transform:rotateZ(180deg);}
+.hot-hotel .nav nav span{width:1.93rem;height:.68rem;display:block;float:left;color:#a64b00;font-size:.3rem;text-align:center;line-height:.68rem;position:relative;}
+.hot-hotel .nav nav span::after{content:'';position:absolute;width:.03rem;height:.44rem;background:#a64b00;right:0;top:50%;transform:translateY(-60%);-webkit-transform: translateY(-60%);-ms-transform: translateY(-60%);-o-transform:translateY(-60%) ;transform:translateY(-60%) ;}
+.hot-hotel .nav nav .active{background:#fff;}
+.hot-hotel .nav nav .active::after{content:'';display:none;}
+.hot-hotel .nav .otherCity{width:100%;background:rgba(255,144,110,.4);clear:both;display:none;padding:.1rem 0;}
+.hot-hotel .nav .otherCity a{display:block;width:16.666%;color:#fdc3ac;font-size:.26rem;float:left;text-align:center;}
+
+.hot-hotel .hh-content{padding:.2rem .1rem;background:#bc3b08;}
+.hot-hotel .hh-content a{display:block;background:#fff;padding:.1rem;position:relative;float:left;width:2.9rem;margin:.1rem .1rem;}
+.hot-hotel .hh-content img{width:100%;height:1.9rem;}
+.hot-hotel .hh-content .pro_img .cityPos{position:absolute;padding:0 0 0 .1rem;background:rgba(0,0,0,.7);font-size:.2rem;color:#fff;top:.2rem;left:.2rem;border-radius:.1rem;letter-spacing:.1rem;}
+.hot-hotel .hh-content .pro_info{color:#333;font-size:.22rem;line-height:1.3;height: .6rem;}
+.hot-hotel .hh-content .pro_price{color:#f43b4f;font-size:.36rem;font-weight:bold;text-align:center;padding-top:.07rem;}

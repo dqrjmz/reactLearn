@@ -1,10 +1,7 @@
 node_modules
 
-react.sublime-project
-react.sublime-workspace
-
-reactLearn.sublime-project
-reactLearn.sublime-workspace
+*.sublime-project
+*.sublime-workspace
 
 web.config
 

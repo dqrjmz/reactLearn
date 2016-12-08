@@ -116,21 +116,28 @@ class BaoKuanComponent extends Component {
     }
 
     render() {
-        return ( < section className = "baokuan" >
-            < h2 > < img src = {this.props.baoKuanData.headPic} alt = "" / > < /h2> 
-            <BaoKuanNavComponent navTitle={this.state.navTitle} / >
-            <BaoKuanContentComponent conList={this.state.conList} / >
+        return ( 
+            <section className = "baokuan">
+                < h2 > < img src = {this.props.baoKuanData.headPic} alt = "" / > < /h2> 
+                <BaoKuanControlComponent navTitle={this.state.navTitle} conList={this.state.conList}>
+                    {
+                        this.state.conList.map((el,index)=>{
+                          return  <BaoKuanListComponent mdetail={el} />
+                        })
+                    }
+                </BaoKuanControlComponent>
             </section>
         );
     }
 }
 
 // bakuan nav component
-class BaoKuanNavComponent extends Component {
+class BaoKuanControlComponent extends Component {
     constructor(props) {
         super(props);
         this.state={
             navTitle:this.props.navTitle,
+            conList:this.props.conList,
             currentIndex:0
         }
     }
@@ -139,59 +146,65 @@ class BaoKuanNavComponent extends Component {
 
     }
 
+    getItemCurrent(index){
+        return index==this.state.currentIndex?'bk-content active':'bk-content';
+    }
+
     render() {
-        let li=``;
         return ( 
             <div>
-            <nav className = "bk-nav" >
-                < ul className = "clearfix" >
+                <nav className = "bk-nav" >
+                    < ul className = "clearfix" >
+                        {
+                            this.state.navTitle.map((el,index)=>{
+                                return <li className = {index===this.state.currentIndex?'active':''} onClick={()=>{this.setState({currentIndex:index})}}> {el} < /li>
+                            })
+                        }
+                    < /ul> 
+                </nav>
+                <div>   
                     {
-                        this.state.navTitle.map((el,index)=>{
-                            return <li className = {index===this.state.currentIndex?'active':''} onClick={()=>{this.setState({currentIndex:index})}}> {el} < /li>
+                        React.Children.map(this.props.children,(el,index)=>{
+                            return (
+                                <article className ={this.getItemCurrent(index)} >
+                                     {this.props.children}
+                                </article>
+                            )
                         })
                     }
-                < /ul> 
-            </nav >
-            <div>   
-                {
-                     
-                }
-            </div>
+                </div>
             </div>
         );
     }
 }
 
-// baokuan content component
-class BaoKuanContentComponent extends Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return ( < article className = "bk-content" >
-            < BaoKuanListComponent / >
-            < /article>
-        );
-    }
-}
 
 // baokuan list component
 class BaoKuanListComponent extends Component {
     constructor(props) {
         super(props);
+        console.log(this.props.mdetail);
     }
     render() {
-        return ( < a href = ""
-            data-hotelid = "147274" >
-            < dl >
-            < dt className = "pro_img" >
-            < span className = "pos_city" > 上海出发 < /span> < span className = "eleven_logo" > < /span > < span className = "pro_title" > 巴厘岛7天5晚浪漫2人巴厘岛7天5晚浪漫2人巴厘岛7天5晚浪漫2人巴厘岛7天5晚浪漫2人巴厘岛7天5晚浪漫2人 < /span> < img src = "../images / pro_img.jpg " alt = "
-            " / > < /dt> < dd className = "
-            info " > < span className = "
-            pro_description " > < b className = "limit-text-length" >
-            2 晚独栋别墅 + 3 晚INAYA酒店、 SOBEK漂流2晚独栋别墅 + 3 晚INAYA酒店、 SOBEK漂流2晚独栋别墅 + 3 晚INAYA酒店、 SOBEK漂流 < /b> < /span > < span className = "pro_price" >
-            < p > & yen; < strong > 1999 < /strong><b>起</b > < /p> < /span > < /dd> < /dl >
-            < /a>
+        return ( 
+            this.props.mdetail.map((el,index)=>{
+                <a href = "" data-hotelid = "147274" >
+                    <dl >
+                        <dt className = "pro_img">
+                            <span className = "pos_city"> {el.mpname} </span> 
+                            <span className = "eleven_logo"> < /span > 
+                            <span className = "pro_title"> {el.mhotelname}</span> 
+                            <img src ={el.mimage} alt = "" /> 
+                        </dt> 
+                        <dd className="info"> 
+                        <span className="pro_description"> 
+                            <b className="limit-text-length"></b> 
+                        </span > 
+                        <span className ="pro_price">
+                        <p> & yen; <strong> 1999 </strong><b>起</b> </p> </span> </dd> 
+                    </dl>
+                </a>
+            })
         );
     }
 }

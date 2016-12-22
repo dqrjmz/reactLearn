@@ -1,28 +1,60 @@
-var gulp = require("gulp");
-var webpack = require("webpack-stream");
-var browserSync = require('browser-sync').create();
+const gulp = require('gulp');
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+const cssnano = require('gulp-cssnano');
+const concat = require('gulp-concat');
+const browserify = require('browserify');
+const source = require('vinyl-source-stream');
+var browserSync = require('browser-sync').create(); //浏览器异步刷新
 
-// gulp.task("build", function() {
-//     return gulp.src("src/js/main.js")
-//         .pipe(webpack(require("./webpack.config.js")))
-//         .pipe(gulp.dest("./lib"))
-// });
+// 编译并压缩js
+gulp.task('convertJS', function(){
+  return gulp.src('src/js/*.js')
+    .pipe(babel({
+      presets: ['stage-3']
+    }))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/js'))
+})
 
+// 合并并压缩css
+gulp.task('convertCSS', function(){
+  return gulp.src('src/css/*.css')
+    .pipe(concat('index.css'))
+    .pipe(cssnano())
+    .pipe(rename(function(path){
+      path.basename += '.min';
+    }))
+    .pipe(gulp.dest('dist/css'));
+})
 
-gulp.task('browser-sync',function () {
-    var files = [
-        '**/*.html',
-        '**/*.css',
-        '**/*.js'
-    ];
-//代理模式（本地服务器）
-    browserSync.init(files,{
-        proxy: 'http://10.101.28.76:91/html/index.html?_ijt=5d9fjooo2tdvvf1uh6tb8qmlma#/index',  //此处根据项目实际目录填写
+// 监视文件变化，自动执行任务
+gulp.task('watch', function(){
+  gulp.watch('src/css/*.css', ['convertCSS']);
+  gulp.watch('src/js/*.js', ['convertJS', 'browserify']);
+})
+
+// browserify
+gulp.task("browserify", function () {
+    var b = browserify({
+        entries: "dist/js/one.js"
     });
-//本地静态文件
-//     browserSync.init(files, {
-//         server: {
-//             baseDir: './src'   //该路径到html的文件夹目录
-//         }
-//     });
+
+    return b.bundle()
+        .pipe(source("bundle.js"))
+        .pipe(gulp.dest("dist/js"));
 });
+
+// 静态服务器 + 监听 scss/html 文件
+gulp.task('serve', function() {
+
+    browserSync.init({
+        server: "./src"
+    });
+    gulp.watch("src/html/*.html").on('change', browserSync.reload);
+});
+
+
+// 开始执行任务
+gulp.task('start', ['convertJS', 'convertCSS', 'browserify', 'watch','serve']);

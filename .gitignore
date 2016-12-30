@@ -1,10 +1,8 @@
 node_modules
+dist
 
-react.sublime-project
-react.sublime-workspace
-
-reactLearn.sublime-project
-reactLearn.sublime-workspace
+*.sublime-project
+*.sublime-workspace
 
 web.config
 

@@ -29,13 +29,14 @@ module.exports = {
 
         'webpack-dev-server/client?http://10.101.28.76:91', 
         'webpack/hot/only-dev-server.js'/'webpack/hot/dev-server.js'
+
     */
     //自动刷新
     //方式一：
-    entry: ['webpack/hot/dev-server.js', 'webpack-dev-server/client?http://localhost:8080', './src/js/one.js'],
+    // entry: ['webpack/hot/dev-server.js', 'webpack-dev-server/client?http://localhost:8080', './src/js/one.js'],
 
-    //?方式二：添加<script src="http://localhost:8080/webpack-dev-server.js"></script>
-    //entry: ['./src/js/main.js'],
+   // ?方式二：添加<script src="http://localhost:8080/webpack-dev-server.js"></script>
+    entry: ['./src/js/one.js'],
     //打包输出的文件
     output: {
         path: path.join(__dirname, 'dist'),
@@ -67,7 +68,7 @@ module.exports = {
     // 模块的简写
     resolve: {
         // 注意需要加  .jsx
-        extensions: ['', '.js', '.jsx', '.json', '.css']
+        extensions: ['', '.js', '.jsx', '.json', '.css','.less']
     },
     //源代码
     devtool: 'source-map',
@@ -90,7 +91,7 @@ module.exports = {
         new ExtractTextPlugin("css/style.css"),
         //打开浏览器插件 
         new OpenBrowserPlugin({
-            url: 'http://localhost:8080/html/main.html'
+            url: 'http://10.101.28.76:83/javascript/reactLearn/dist/html/main.html'
         }),
         //给打包后的文档头部添加声明
         new webpack.BannerPlugin(banner),
@@ -102,11 +103,16 @@ module.exports = {
                 NODE_ENV: JSON.stringify("production")
             }
         }),
-        // 将公共js打包
-        // new CommonsChunkPlugin('js/comm.js')
         //提取公用部分
-        new webpack.optimize.CommonsChunkPlugin('js/common.js'),
-        //高版本的webpack
+        new webpack.optimize.CommonsChunkPlugin('js/common.js')
+    ]
+}
+
+
+
+// 另一份
+/*var path = require('path'); //nodejs操作路径对象
+ //高版本的webpack
         // new webpack.LoaderOptionsPlugin({
         //     options: {
         //         postcss: function() {
@@ -120,14 +126,6 @@ module.exports = {
         //         // }
         //     }
         // })
-    ]
-}
-
-
-
-// 另一份
-/*var path = require('path'); //nodejs操作路径对象
-
 module.exports = {
     entry: [
         'webpack/hot/dev-server',

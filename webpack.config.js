@@ -36,7 +36,7 @@ module.exports = {
     // entry: ['webpack/hot/dev-server.js', 'webpack-dev-server/client?http://localhost:8080', './src/js/one.js'],
 
    // ?方式二：添加<script src="http://localhost:8080/webpack-dev-server.js"></script>
-    entry: ['./src/js/one.js'],
+    entry: ['./src/js/react.js'],
     //打包输出的文件
     output: {
         path: path.join(__dirname, 'dist'),
@@ -62,8 +62,6 @@ module.exports = {
             }
         ]
     },
-    // postcss处理css自动添加前缀
-    // postcss: [autoprefixer({ browsers: ['last 2 versions'] })],
     // 省略文件类型
     // 模块的简写
     resolve: {
@@ -91,7 +89,7 @@ module.exports = {
         new ExtractTextPlugin("css/style.css"),
         //打开浏览器插件 
         new OpenBrowserPlugin({
-            url: 'http://10.101.28.76:83/javascript/reactLearn/dist/html/main.html'
+            url: 'http://127.0.0.1/javascript/reactLearn/dist/html/main.html'
         }),
         //给打包后的文档头部添加声明
         new webpack.BannerPlugin(banner),

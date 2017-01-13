@@ -18,7 +18,7 @@ var App=React.createClass({
         console.log('组件进行渲染,渲染完成后组件才会被真正装载');
         return (
             <div>
-                渲染组件完成
+                渲染组件完成来拉来
             </div>
         );
     }

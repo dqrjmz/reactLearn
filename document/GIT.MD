@@ -3,7 +3,7 @@
 #git flow
 - git的工作流程规范
 - 初始化工作环境 git flow init
-- 创建特性分支
+- 创建特性分支  
 
 #GIT
 

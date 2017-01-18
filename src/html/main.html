@@ -1,47 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>learn react</title>
 </head>
+
 <body>
     <div id="app"></div>
 
     <script src="../../bower_components/react/react.js"></script>
     <script src="../../bower_components/react/react-dom.js"></script>
     <script src="../js/lib/JSXTransformer.js"></script>
-    <script type="text/jsx"> 
-    var MessageBox=React.createClass({
-        alert:function(){
-            alert('df');
-        },
-        render:function(){
-            var sbuArr=[];
-            for(var i=0;i<10;i++){
-                sbuArr.push(<SubMssage key={i} />);
-            }
-            return (
-                <div onClick={this.alert}>
-                    <h1>hello world</h1>
-                    {sbuArr}
-                </div>
-            );
-        }
-    });
+    <script type="text/jsx">
+        var App=React.createClass({ render:function(){ return (
+        <div>34</div>); } }); ReactDOM.render(
 
-    var SubMssage=React.createClass({
-        render:function(){
-            return (
-                <div>
-                    <h2>hehhe</h2>
-                </div>
-            );
-        }
-    });
-
-    ReactDOM.render(<MessageBox />,document.getElementById('app'),function(){
-        console.log('可以的');
-    });
+        <App />,document.querySelector('#app'));
     </script>
+
 </body>
+
 </html>

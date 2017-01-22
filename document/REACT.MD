@@ -52,6 +52,12 @@
 13. 组件中js执行{}不可加引号
 14. browser.js编译jsx文件，不能使用本地磁盘路径file://d:
 15. 事件不要绑定在组件上，组价是dom的包装器
+16. jsx中js的用{}模板来计算，html的用string
+17. function中的this指向
+18. map遍历中，每个元素需要加上key
+19. js操作中数据是核心
+20. jsx中拼接字符串data-a="abc{a}"是不对的，会被当做字符串处理，data-a={'abc'+a}正确
+
 
 *****
 
@@ -74,6 +80,35 @@
 ##事件
 - 事件参数（对象）
 - 事件对象，属性，每个事件对象都有的
+- 事件处理函数传值方式
+  1. 方式1
+  ```
+   <li data-index={index} className={this.state.currentCity==index?"normal nav_active":'normal'} onClick={(e)=>{this.tabCity(index)}}  key={index}>{item}</li>
+  ```
+
+  2. 方式2
+  **需要配合dom操作，不推荐**
+  ```
+   tabCity:function(ev){
+        this.setState({
+            currentCity:ev.target.getAttribute('data-index')
+        });
+    },
+    render:function(){
+      
+        return (
+             <ul className={this.props.isOpen?'nav_list active':'nav_list'}>
+              {
+                  this.props.cityListData.map((item,index)=>{
+                      return (
+                         <li data-index={index} className={this.state.currentCity==index?"normal nav_active":'normal'} onClick={this.tabCity}  key={index}>{item}</li>
+                      );
+                  })
+              }       
+            </ul>
+        );
+    }
+  ```
 
 
 

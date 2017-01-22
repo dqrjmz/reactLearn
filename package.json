@@ -7,7 +7,8 @@
         "build": "webpack --watch --progress --color --config webpack.config.react.js",
         "start": "webpack-dev-server --devtool eval --progress --colors --hot --content-base dist",
         "other": "webpack --watch --progress --color --config webpack.config.dist.js",
-        "babel-my": "babel src/js -d dist/js -w"
+        "babel-my": "babel src/js -d dist/js -w",
+        "react-my":"webpack --watch --progress --color --config webpack.config.react.js"
     },
     "author": "",
     "license": "ISC",

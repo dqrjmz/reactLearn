@@ -54,13 +54,14 @@ module.exports = {
     plugins: [
         //打开浏览器插件 
         new OpenBrowserPlugin({
-            url: 'http://localhost:8080/html/main.html'
+            url: 'http://localhost:8080/html/index.html'
         }),
         // 热替换
         new webpack.HotModuleReplacementPlugin(),
         //自动生成html
         new HtmlWebpackPlugin({
-            filename: 'dist/html/main.html'
+            filename: 'dist/html/main.html',
+            template: 'src/html/main.html'
         })
     ]
 };

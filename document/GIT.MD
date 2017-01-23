@@ -1,9 +1,4 @@
-#版本控制工具
-
-#git flow
-- git的工作流程规范
-- 初始化工作环境 git flow init
-- 创建特性分支  
+#版本控制工具 
 
 #GIT
 
@@ -55,6 +50,7 @@
 git --config配置自己的git仓库门牌号
 git --config user.name
 git --config user.email
+
 
 
 创建目录，切换目录

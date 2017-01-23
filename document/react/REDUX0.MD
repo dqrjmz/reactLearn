@@ -58,3 +58,12 @@ const reducer=function(state,action){
 
 6. 纯函数
 - 同样的输入，得到同样的输出，reducer函数是纯函数，为的是保证同样的state得到同样的view
+
+
+
+##总结
+- redux的工作流程(redux flow)
+1. 用户从view发出一个actin
+    - store.dispatch(action);
+2. store调用reducer,处理当前state，返回新的state
+3. state变化之后，调用监听函数 store.subscribe(listener),重新渲染view;

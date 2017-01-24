@@ -10,4 +10,4 @@ web.config
 *.vscode
 
 src/js/workComponent
-src/css/index.css
+src/css/*.css

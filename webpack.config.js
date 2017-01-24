@@ -7,6 +7,7 @@
     })
  *   在服务器环境下检测文件修改，并实施刷新 
  * 'webpack/hot/dev-server.js'  + new webpack.HotModuleReplacementPlugin()
+ * 检测入口文件的异动，以及入口文件依赖的其他模块文件的改动
  * 
  */
 
@@ -54,7 +55,7 @@ module.exports = {
     plugins: [
         //打开浏览器插件 
         new OpenBrowserPlugin({
-            url: 'http://localhost:8080/html/index.html'
+            url: 'http://localhost:8080/html/main.html'
         }),
         // 热替换
         new webpack.HotModuleReplacementPlugin(),

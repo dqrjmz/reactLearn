@@ -44,7 +44,7 @@
   - this.props:用户一旦定义不能改变 
   - this.state:随时改变的值 
 7. 组件的生命周期 
-8. {}一个花括号，表示这个一段js代码，{{}}表示样式  
+8. {}一个花括号，表示这个一段js代码，{{}}表示样式 
 9. ☆react组价中的标签不能不闭合 (标签缺少一个都不行)
 10. import 中导入的模块【自定义的】，必须是路径，否则not find; 
 11. 组件的名称不要冲突 
@@ -57,6 +57,28 @@
 18. map遍历中，每个元素需要加上key
 19. js操作中数据是核心
 20. jsx中拼接字符串data-a="abc{a}"是不对的，会被当做字符串处理，data-a={'abc'+a}正确
+21. jsx就是js可以嵌套循环
+```
+this.state.arrData.map(function (item, index) {
+                            return (
+                                <ul key={index} className={that.state.currentNum == index ? 'clearfix block' : 'clearfix'}>
+                                    {
+                                        item.map(function (a, i) {
+                                            return (
+                                                <li key={i}>
+                                                    <a href=""><img src={a.src} alt="" />
+                                                        <b>{a.name}</b>
+                                                    </a>
+                                                </li>
+                                            );
+                                        })
+                                    }
+                                </ul>
+                            );
+})
+```
+
+22. 在
 
 
 *****
@@ -83,7 +105,7 @@
 - 事件处理函数传值方式
   1. 方式1
   ```
-   <li data-index={index} className={this.state.currentCity==index?"normal nav_active":'normal'} onClick={(e)=>{this.tabCity(index)}}  key={index}>{item}</li>
+   <li data-index={index} className={this.state.currentCity==index?"normal nav_active":'normal'} onClick={(e)=>{this.tabCity(e,index)}}  key={index}>{item}</li>
   ```
 
   2. 方式2

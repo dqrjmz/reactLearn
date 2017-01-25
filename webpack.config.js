@@ -26,8 +26,8 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: ['webpack/hot/dev-server.js', 'webpack-dev-server/client?http://localhost:8080', './src/js/react.jsx'],
     output: {
-        path: path.join(__dirname, './dist/js'),
-        filename: 'bundle.js'
+        path: path.join(__dirname, './dist'),
+        filename: 'js/bundle.js'
     },
     resolve: {
         extensions: ['', '.js', '.jsx']
@@ -35,20 +35,11 @@ module.exports = {
     module: {
         loaders: [
             // 编译es6/jsx文件使得浏览器可以支持
-            {
-                test: /\.js|jsx$/,
-                loaders: ['babel']
-            },
+            {test: /\.js|jsx$/,loaders: ['babel']},
             // 让webpack支持加载css样式文件
-            {
-                test: /\.css$/, // Only .css files
-                loader: 'style!css' // Run both loaders
-            },
+            {test: /\.css$/,loader: 'style!css'},
             // 内联 base64 URLs, 限定 <=8k 的图片, 其他的用 URL
-            {
-                test: /\.(png|jpg)$/,
-                loader: 'url-loader?limit=8192'
-            }
+            {test: /\.(png|jpg)$/,loader: 'url-loader?limit=8192'}
         ]
     },
     // 配置插件
@@ -57,11 +48,13 @@ module.exports = {
         new OpenBrowserPlugin({
             url: 'http://localhost:8080/html/main.html'
         }),
-        // 热替换
+        // 启动自动刷新
         new webpack.HotModuleReplacementPlugin(),
         //自动生成html
+        // 这里的输出路径根据输出的路径来；filename
+        // template路径根据webpack.config.js当前文件路径来
         new HtmlWebpackPlugin({
-            filename: 'dist/html/main.html',
+            filename: 'html/main.html',
             template: 'src/html/main.html'
         })
     ]

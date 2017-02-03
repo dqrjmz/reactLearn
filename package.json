@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "build": "webpack --watch --progress --color --config webpack.config.react.js",
-    "start": "webpack-dev-server --devtool eval --progress --colors --hot --content-base dist",
+    "start": "webpack-dev-server --devtool eval --progress --colors --hot --content-base dist --history-api-fallback",
     "other": "webpack --watch --progress --color --config webpack.config.dist.js",
     "babel-my": "babel src/js -d dist/js -w",
     "react-my": "webpack --watch --progress --color --config webpack.config.react.js"

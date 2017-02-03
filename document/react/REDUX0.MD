@@ -67,3 +67,5 @@ const reducer=function(state,action){
     - store.dispatch(action);
 2. store调用reducer,处理当前state，返回新的state
 3. state变化之后，调用监听函数 store.subscribe(listener),重新渲染view;
+4. 使用redux将所有组件的状态维护到底层组件，通过props来进行状态分发；
+5. 只有一个单一的 store 和一个根级的 reduce 函数（reducer）

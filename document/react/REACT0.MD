@@ -44,12 +44,44 @@
   - this.props:用户一旦定义不能改变 
   - this.state:随时改变的值 
 7. 组件的生命周期 
-8. {}一个花括号，表示这个一段js代码，{{}}表示样式  
+8. {}一个花括号，表示这个一段js代码，{{}}表示样式 
 9. ☆react组价中的标签不能不闭合 (标签缺少一个都不行)
 10. import 中导入的模块【自定义的】，必须是路径，否则not find; 
 11. 组件的名称不要冲突 
 12. 组件中元素的属性data - index中间有空格，会报错 
 13. 组件中js执行{}不可加引号
+14. browser.js编译jsx文件，不能使用本地磁盘路径file://d:
+15. 事件不要绑定在组件上，组价是dom的包装器
+16. jsx中js的用{}模板来计算，html的用string
+17. function中的this指向
+18. map遍历中，每个元素需要加上key
+19. js操作中数据是核心
+20. jsx中拼接字符串data-a="abc{a}"是不对的，会被当做字符串处理，data-a={'abc'+a}正确
+21. jsx就是js可以嵌套循环
+```
+this.state.arrData.map(function (item, index) {
+                            return (
+                                <ul key={index} className={that.state.currentNum == index ? 'clearfix block' : 'clearfix'}>
+                                    {
+                                        item.map(function (a, i) {
+                                            return (
+                                                <li key={i}>
+                                                    <a href=""><img src={a.src} alt="" />
+                                                        <b>{a.name}</b>
+                                                    </a>
+                                                </li>
+                                            );
+                                        })
+                                    }
+                                </ul>
+                            );
+})
+```
+
+22. 在
+
+
+*****
 
 ##props
 - 是子组件和父组件互动的唯一方式；
@@ -66,3 +98,39 @@
 - 自定义mixins
 - react组价中引用这个mixin，可以写组件的生命周期
 - 为了组件的复用而复用
+
+##事件
+- 事件参数（对象）
+- 事件对象，属性，每个事件对象都有的
+- 事件处理函数传值方式
+  1. 方式1
+  ```
+   <li data-index={index} className={this.state.currentCity==index?"normal nav_active":'normal'} onClick={(e)=>{this.tabCity(e,index)}}  key={index}>{item}</li>
+  ```
+
+  2. 方式2
+  **需要配合dom操作，不推荐**
+  ```
+   tabCity:function(ev){
+        this.setState({
+            currentCity:ev.target.getAttribute('data-index')
+        });
+    },
+    render:function(){
+      
+        return (
+             <ul className={this.props.isOpen?'nav_list active':'nav_list'}>
+              {
+                  this.props.cityListData.map((item,index)=>{
+                      return (
+                         <li data-index={index} className={this.state.currentCity==index?"normal nav_active":'normal'} onClick={this.tabCity}  key={index}>{item}</li>
+                      );
+                  })
+              }       
+            </ul>
+        );
+    }
+  ```
+
+
+

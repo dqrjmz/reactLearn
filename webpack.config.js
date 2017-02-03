@@ -24,7 +24,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
-    entry: ['webpack/hot/dev-server.js', 'webpack-dev-server/client?http://localhost:8080', './src/js/react.jsx'],
+    entry: ['webpack/hot/dev-server.js', 'webpack-dev-server/client?http://localhost:8080', './src/js/index.jsx'],
     output: {
         path: path.join(__dirname, './dist'),
         filename: 'js/bundle.js'
@@ -35,11 +35,11 @@ module.exports = {
     module: {
         loaders: [
             // 编译es6/jsx文件使得浏览器可以支持
-            {test: /\.js|jsx$/,loaders: ['babel']},
+            { test: /\.js|jsx$/, loaders: ['babel'] },
             // 让webpack支持加载css样式文件
-            {test: /\.css$/,loader: 'style!css'},
+            { test: /\.css$/, loader: 'style!css' },
             // 内联 base64 URLs, 限定 <=8k 的图片, 其他的用 URL
-            {test: /\.(png|jpg)$/,loader: 'url-loader?limit=8192'}
+            { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' }
         ]
     },
     // 配置插件

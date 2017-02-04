@@ -23,3 +23,4 @@ const render=()=>ReactDOM.render(
 
 //订阅事件
 store.subscribe(render);
+

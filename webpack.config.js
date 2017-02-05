@@ -21,10 +21,15 @@ var path = require('path');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 // 自动生成html
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+// 使用generator功能的es6
+require("babel-polyfill");
 
 
 module.exports = {
-    entry: ['webpack/hot/dev-server.js', 'webpack-dev-server/client?http://localhost:8080', './src/js/react.jsx'],
+    entry: ['webpack/hot/dev-server.js', 'webpack-dev-server/client?http://localhost:8080',
+        'babel-polyfill',
+        './src/js/react.jsx'
+    ],
     output: {
         path: path.join(__dirname, './dist'),
         filename: 'js/bundle.js'

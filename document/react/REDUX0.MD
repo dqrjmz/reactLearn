@@ -1,4 +1,11 @@
 #redux
+数据流：应用中行为与相应的抽象；
+
+## 数据流
+- 用户的每个action通过dispatch()方法分发到若干个store中，更新到view上；
+
+## redux应用的流程
+![图片](../images/redux.png)
 
 ##几个概念
 

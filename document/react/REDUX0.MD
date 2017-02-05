@@ -1,8 +1,8 @@
-#redux
-数据流：应用中行为与相应的抽象；
-
 ## 数据流
 - 用户的每个action通过dispatch()方法分发到reducer方法中，更新若干个store中的state,返回新的store，更新到view上；
+
+#redux
+数据流：应用中行为与相应的抽象；
 
 ## react-redux
 是react对redux数据流的react实现；
@@ -19,7 +19,7 @@
 - server.js
 - webpack
 
-##几个概念
+## 几个概念
 
 1. store:保存数据的地方；
 - 使用creatStore()方法生成store对象；
@@ -44,6 +44,18 @@ store.getState()
 ```
 
 3. action:view发出的通知，表示state要改变
+- 行为的抽象
+- 不同js对象
+- 可以由一般方法生成
+```
+const addTodo=(text)=>{
+   return {
+     type:'ADD_TODO',
+     id:nextTODO++,
+     text
+   }
+}
+```
 - 改变state的唯一方式就是action
 ```
 {
@@ -52,7 +64,7 @@ store.getState()
 }
 ```
 
-4. action creator
+4. action creator,action生成函数
 - 因为view要多少种信息，就要有多少种action，所以action会很多，所以，使用函数来生成aciton
 ```
 function(type,text){
@@ -64,6 +76,7 @@ function(type,text){
 
 5. reducer:接受到action后，改变state,并给出一个新的state
 - 这是一种state计算的过程；
+- 响应的抽象
 ```
 const reducer=function(state,action){return new state}
 
@@ -79,8 +92,11 @@ const reducer=function(state,action){
 - 同样的输入，得到同样的输出，reducer函数是纯函数，为的是保证同样的state得到同样的view
 
 
+7. redux项目中的组件使用
+![component](../images/component.png)
 
-##总结
+
+## 总结
 - redux的工作流程(redux flow)
 1. 用户从view发出一个actin
     - store.dispatch(action);
@@ -88,3 +104,9 @@ const reducer=function(state,action){
 3. state变化之后，调用监听函数 store.subscribe(listener),重新渲染view;
 4. 使用redux将所有组件的状态维护到底层组件，通过props来进行状态分发；
 5. 只有一个单一的 store 和一个根级的 reduce 函数（reducer）
+6. reducers是放到store中来。并createStore(reducers)返回store
+7. store其实是reducer和state的混合体；
+8. action不是直接作用在reducer上的，是作用到store上的，reudcer根据reducer来响应；
+9. sotre唯一性
+10. store包含完整的state
+11. state完全可预测

@@ -18,11 +18,25 @@
 
 
 ##react api
-- react.createElement  创建虚拟dom的两个方法
-- react.createClass    创建虚拟dom的两个方法
+- react.createElement 
+1. 创建虚拟dom的两个方法createElement('p',null,)
+2. 返回react对象
+- react.createClass    
+1. 创建虚拟dom的两个方法jsx
+2. 返回react对象
+
+## jsx可展开属性 ...props
+
+## mixin对象
+- 这个对象的属性都会被拷贝到react对象的原型属性
 
 
 ##领悟
 - jquery中导出的全局对象$===jQuery
 - react中导出的全局对象React
 - react-dom中导出的全局对象ReactDOM
+
+
+##总结
+1. 组件就是一个实现预定义接口的类
+2. 对react组件原型进行拓展React.createClass({})

@@ -132,5 +132,8 @@ this.state.arrData.map(function (item, index) {
     }
   ```
 
+## 整体react的总结：
+![图片](../images/react.png)
+
 
 

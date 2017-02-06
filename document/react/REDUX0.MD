@@ -1,4 +1,23 @@
 #redux
+数据流：应用中行为与相应的抽象；
+
+## 数据流
+- 用户的每个action通过dispatch()方法分发到reducer方法中，更新若干个store中的state,返回新的store，更新到view上；
+
+## react-redux
+是react对redux数据流的react实现；
+
+## redux应用的流程
+![图片](../images/redux.png)
+
+## redux项目的基本目录结构
+- components ：react展示组件
+- containers : 容器组件
+- reducers   : 纯函数方法
+- store      : 应用的状态容器
+- index.html
+- server.js
+- webpack
 
 ##几个概念
 

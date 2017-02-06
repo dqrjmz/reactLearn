@@ -1,19 +1,19 @@
 import React,{Component,PropTypes} from 'react';
 
 class CounterComponent extends Component{
-    static propTypes={
-        value:PropTypes.number.isRequired,
-        onIncrement:PropTypes.func.isRequired,
-        onDecrement:PropTypes.func.isRequired
-    }
+    // static propTypes={
+    //     value:PropTypes.number.isRequired,
+    //     onIncrement:PropTypes.func.isRequired,
+    //     onDecrement:PropTypes.func.isRequired
+    // }
 
-    incrementIfOdd=()=>{
+    incrementIfOdd(){
         if(this.props.value%2!==0){
             this.props.onIncrement();
         }
     }
 
-    incrementAsync = () => {
+    incrementAsync ()  {
         setTimeout(this.props.onIncrement, 1000)
     }
 

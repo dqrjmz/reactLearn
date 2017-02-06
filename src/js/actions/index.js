@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * view层行为的抽象
  */
@@ -30,21 +29,3 @@ export const toggleTodo = (id) => {
         id
     }
 }
-=======
-let nextTodoId=0;
-export const addTodo=(text)=>({
-    type:'ADD_TODO',
-    id:nextTodoId++,
-    text
-})
-
-export const setVisibilityFilter=(filter)=>({
-    type:'SET_VISIBILITY_FILTER',
-    filter
-});
-
-export const toggleTodo=(id)=>({
-    type:'TOGGLE_TODO',
-    id
-});
->>>>>>> 707bb092264ed0501392a6fc649ba01bb0743687

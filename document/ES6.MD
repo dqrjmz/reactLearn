@@ -58,5 +58,61 @@ zdyMethod(){
 
 
 #ecmascript中的面向对象
-- 工场模式
+```
+/**
+ * 面向对象编程的方式，模块化；
+ */
+
+function ObjProject(){
+    // 这里定义变量【属性】
+    this.a=0;
+    this.b=3;
+}
+
+// 这里定义方法【行为】
+ObjProject.prototype.init=function(){
+    console.log(this.a+this.b);
+}
+
+new ObjProject().init();
+
+
+// 继承
+function ObjSub(){
+    ObjProject.call(this,null);
+    this.name="jmz";
+    this.age='24';
+}
+
+ObjSub.prototype=ObjProject.prototype;
+
+ObjSub.prototype.say=function(){
+    console.log(this.name,this.a+this.b);
+}
+
+new ObjSub().say();
+
+上下两者比较起来更容易理解；
+
+var obj={
+    // 这里定义变量【属性】
+    a:0,
+    b:2,
+    // 这里定义方法【行为】
+    init(){
+        console.log(this.a+this.b+'jmz');
+    }
+}
+
+obj.init();
+
+var objSub=Object.assign({
+    c:'5',
+    init(){
+        console.log(this.c+this.a+'df')
+    }
+},obj);
+
+objSub.init();
+```
 

@@ -1,4 +1,4 @@
-// 这里写的是 容器组件；
+/*// 这里写的是 容器组件；
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {createStore} from 'redux';
@@ -22,5 +22,9 @@ const render=()=>ReactDOM.render(
 );
 
 //订阅事件
-store.subscribe(render);
+store.subscribe(render);*/
+
+
+
+
 

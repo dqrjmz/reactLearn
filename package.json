@@ -4,11 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "build": "webpack --watch --progress --color --config webpack.config.react.js",
     "start": "webpack-dev-server --devtool eval --progress --colors --hot --content-base dist --history-api-fallback",
-    "other": "webpack --watch --progress --color --config webpack.config.dist.js",
-    "babel-my": "babel src/js -d dist/js -w",
-    "react-my": "webpack --watch --progress --color --config webpack.config.react.js"
+    "open":"react-srciprs start"
   },
   "author": "",
   "license": "ISC",
@@ -39,6 +36,7 @@
     "open-browser-webpack-plugin": "0.0.2",
     "postcss-loader": "^0.13.0",
     "precss": "^1.4.0",
+    "react-scripts": "^0.8.5",
     "redux-devtools": "^3.3.1",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",

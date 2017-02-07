@@ -2,22 +2,42 @@ import React,{component} from 'react';
 import {render} from 'react-dom';
 
 
+/**
+ * 函数式无状态组件
+ * 起源：纯函数
+ */
 
-/*import React from 'react'
-import { render } from 'react-dom'
-import { createStore } from 'redux'
-import { Provider } from 'react-redux'
-import App from './components/App'
-import reducer from './reducers'
+const MyCom=(props,context )=>{
 
-const store = createStore(reducer)
+  return (
+    <div style={context}>
+       {props.children}
+    </div>
+  );
+}
 
-render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('app')
-)*/
+class App extends React.Component{
+  //  childContextTypes={
+  //   fontFamily:React.PropTypes.string
+  // }
+  getChildContext(){
+    return {
+      fontFamily:'Helvetica Neue',
+      color:'red'
+    }
+  }
+  render(){
+    return (
+      <div>
+        <MyCom></MyCom>
+      </div>
+    );
+  }
+}
+App.childContextTypes={
+fontFamily:React.PropTypes.string,
+color:React.PropTypes.string
+}
 
-
-
+render(<App name='jmz' />,document.querySelector('#app'));
+// const YourCom=()=>{}

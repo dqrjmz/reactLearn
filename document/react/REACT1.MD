@@ -27,6 +27,72 @@
 
 ## jsx可展开属性 ...props
 
+## react生命周期
+```
+import React,{component} from 'react';
+import {render} from 'react-dom';
+
+
+const YourComponent=React.createClass({
+  getInitialState(){
+      return {
+        num:9
+      }
+    },
+  clickHandle(e){
+    this.setState({num:10});
+  },
+  render(){
+    return (
+      <div>
+        <button onClick={this.clickHandle} type="button">点击</button>
+        <MyComponent num={this.state.num}></MyComponent>
+      </div>
+    );
+  }
+});
+
+const MyComponent=React.createClass({
+  getDefaultProps(){
+      return {}
+  },
+  getInitialState(){
+    return {
+
+    }
+  },
+  componentWillMount(){
+    console.log('组件将要被渲染');
+  },
+  render(){
+    return (
+      <div>
+        {this.props.num}
+      </div>
+    );
+  },
+  componentDidMount(){
+    console.log('组件已经被渲染');
+  },
+  componentWillReceiveProps(){
+    console.log('组件属性被重新修改！');
+  },
+  shouldComponentUpdate(nextProps,nextState){
+    console.log('组件是否应该被更新验证！');
+    console.log(nextProps);
+    return false;
+  },
+  componentWillUpdate(){
+    console.log('组件将要被更新！');
+  },
+  componentDidUpdate(){
+    console.log('组件已经被更新');
+  }
+});
+
+render(<YourComponent />,document.querySelector('#app'))
+```
+
 ## mixin对象
 - 这个对象的属性都会被拷贝到react对象的原型属性
 

@@ -15,6 +15,8 @@
     1. 使用git@地址进行clone
     2. 见[方法二](http://www.cnblogs.com/ballwql/p/3462104.html)
 
+- 修改仓库信息
+
 - 本地分支与远程分支进行关联?
   [参考链接](http://www.cnblogs.com/aleafo/p/5807301.html)
   1. git branch --set-upstream branch-name origin/branch-name 

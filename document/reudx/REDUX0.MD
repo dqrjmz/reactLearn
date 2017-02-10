@@ -2,7 +2,7 @@
 - 用户的每个action通过dispatch()方法分发到reducer方法中，更新若干个store中的state,返回新的store，更新到view上；
 
 #redux
-数据流：应用中行为与相应的抽象；
+数据流：应用中行为与响应的抽象；使用数据流【交互流（事件行为与响应处理）】更好的处理复杂的交互
 
 ## react-redux
 是react对redux数据流的react实现；

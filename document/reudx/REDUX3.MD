@@ -45,3 +45,10 @@
     - const myComponent=React.createClass({});
     - class myComponent extends React.Component{};
     - 函数式无状态组件
+
+## 怎么写reduc程序
+1. 将程序的交互抽离出来 action
+2. 将根据交互的相应程序编写出来，返回new state
+3. 创建出数据模型store
+4. 将ui分离出来，容器层，展示层，根据事件交互调用不同的交互抽象
+5. 更新UI

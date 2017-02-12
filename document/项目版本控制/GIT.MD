@@ -46,21 +46,25 @@
 - 版本回退
 - 本地提交，远程同步（pull push）
 
+## git 参与工作的使用方式：
+1. 最好
+
 ##git的使用
-```
+
 **配置自己的git仓库**
+```
 git --config配置自己的git仓库门牌号
 git --config user.name
 git --config user.email
+```
 
 
-
-创建目录，切换目录
+## 创建目录，切换目录
 mkdir 名称
 cd 目录
 
 
-查看文件内容
+## 查看文件内容
 cat 文件名
 
 

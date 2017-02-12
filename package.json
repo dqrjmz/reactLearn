@@ -5,11 +5,12 @@
   "main": "webpack.config.js",
   "scripts": {
     "start": "webpack-dev-server --devtool eval --progress --colors --hot --content-base dist --history-api-fallback",
-    "open":"react-srciprs start"
+    "open":"react-srcipts start"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+     "react-scripts": "^0.6.0",
     "autoprefixer": "^6.4.1",
     "autoprefixer-loader": "^3.2.0",
     "babel-core": "^6.14.0",

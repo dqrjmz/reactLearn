@@ -25,6 +25,7 @@
 
 ## 数据流
 
+- 用来管理组件之间通信（数据传递）
 - 单向
 - 生命周期：
     1. 调用dispatch(action);任何地方都可以调用这个方法；
@@ -46,9 +47,13 @@
     - class myComponent extends React.Component{};
     - 函数式无状态组件
 
-## 怎么写reduc程序
+## 怎么写reduc程序(先抽象state的数据结构)
 1. 将程序的交互抽离出来 action
 2. 将根据交互的相应程序编写出来，返回new state
 3. 创建出数据模型store
 4. 将ui分离出来，容器层，展示层，根据事件交互调用不同的交互抽象
 5. 更新UI
+
+
+## reducer函数的分离：
+1. 根据state结构来分离操作不同部分的reducer函数操作；

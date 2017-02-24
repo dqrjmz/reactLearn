@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "start": "webpack-dev-server --devtool eval --progress --colors --hot --content-base dist --history-api-fallback",
-    "open":"react-srcipts start"
+    "webpack":"webpack --colors --display-modules"
   },
   "author": "",
   "license": "ISC",

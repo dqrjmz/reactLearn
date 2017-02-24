@@ -36,7 +36,7 @@ module.exports = {
     // entry: ['webpack/hot/dev-server.js', 'webpack-dev-server/client?http://localhost:8080', './src/js/one.js'],
 
    // ?方式二：添加<script src="http://localhost:8080/webpack-dev-server.js"></script>
-    entry: ['./src/js/react.js'],
+    entry: ['webpack/hot/dev-server.js', 'webpack-dev-server/client?http://localhost:8080','./src/js/react.js'],
     //打包输出的文件
     output: {
         path: path.join(__dirname, 'dist'),

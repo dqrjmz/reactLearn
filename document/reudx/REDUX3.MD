@@ -57,3 +57,8 @@
 
 ## reducer函数的分离：
 1. 根据state结构来分离操作不同部分的reducer函数操作；
+
+
+## redux的使用；
+1. action 在组件的事件中使用；所以在组件中import
+2. reducer 函数是在创建store时使用，所以在创建store的模块引入

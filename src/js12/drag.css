@@ -1,0 +1,30 @@
+ html,
+ body {
+     background: #333;
+     height: 100%;
+     overflow: hidden;
+ }
+ 
+ #app {
+     overflow: hidden;
+     height: 100%;
+     width: 100%;
+ }
+ 
+ ul,
+ li {
+     height: 100%;
+     overflow: hidden
+ }
+ 
+ li {
+     position: absolute;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ li img {
+     max-width: 100%;
+     max-height: 100%;
+ }

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三级联动</title>
+<style>
+*{margin:0;padding:0;}
+a{text-decoration:none;}
+ul{list-style:none;}
+#box div{position:relative;float: left;margin:0 10px;box-sizing:border-box;padding-left:10px; width:100px;height:30px;line-height:30px;border:1px solid #333;border-radius:10px;}
+#box i{font-style:normal;color:#333;}
+#box em{position:absolute;right:10px;top:50%;margin-top:-2.5px;border-right:5px solid transparent; border-left:5px solid transparent;border-top:5px solid #333;}
+#box ul{display:none;}
+#box li{cursor:pointer;}
+#box li:hover{color:#fff;background:#333}
+</style>
+</head>
+<body>
+    <div id="box">
+        <div class="province">
+            <a href="javascript:;"><i>请选择</i><em></em></a>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </div>
+        <div class="city">
+            <a href="javascript:;"><i>请选择</i><em></em></a>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </div>
+        <div class="section">
+            <a href="javascript:;"><i>请选择</i><em></em></a>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function CitySelector(obj,options){
+            this.oBxo=this.$(obj);
+            this.options=options;
+        }
+        CitySelector.prototype={
+            initial:function () {
+                this.isSwitch();
+                this.selectCity();
+            },
+            $:function(obj){
+              if(typeof(obj)=="string")
+                {
+                    if(obj.indexOf("#")>=0)
+                    {
+                        obj=obj.replace("#","");
+                        if(document.getElementById(obj))
+                        {
+                            return document.getElementById(obj);
+                        }
+                        else
+                        {
+                            alert("没有容器"+obj);
+                            return null;
+                        }   
+                    }
+                    else
+                    {
+                        return document.createElement(obj);
+                    }
+                }
+                else
+                {
+                    return obj;
+                }
+            },
+            isSwitch:function(){
+                var e=this.oBxo.getElementsByTagName('div');
+
+                for(var i=0;i<e.length;i++){
+                    (function(i){
+                        e[i].addEventListener('mouseover',function(ev){
+                            e[i].getElementsByTagName('ul')[0].style.cssText="display:block";
+                        },false);
+                    })(i);
+                }
+
+                for(var i=0;i<e.length;i++){
+                    (function(i){
+                        e[i].addEventListener('mouseout',function(ev){
+                            e[i].getElementsByTagName('ul')[0].style.cssText="display:none";
+                        },false);
+                    })(i);
+                }
+            },
+            selectCity:function () {
+                var p=this.oBxo.getElementsByTagName('div'); 
+                for(var i=0;i<p.length;i++){
+                    (function(i){
+                         p[i].addEventListener('click',function(ev){
+                            var s=ev.target,
+                                ii=p[i].getElementsByTagName('i')[0];
+                            if(s.tagName.toLocaleLowerCase() == 'li'){
+                                ii.innerHTML=s.innerHTML;
+                                s.parentNode.style.cssText='display:none;';
+                            }
+                            // 根据选择的元素判断，异步获取数据
+                            switch(i){
+                                case 0:
+                                break;
+                                case 1:
+                                break;
+                                case 2:
+                                break;
+                            }
+
+                        },false);
+                     })(i);
+                }
+            }
+        }
+        window.onload=function(){
+            new CitySelector('#box',{}).initial();
+        }
+        
+    </script>
+</body>
+</html>

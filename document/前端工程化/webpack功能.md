@@ -1,6 +1,6 @@
-#webpack
+## webpack
 
-1. 热更新/热替换/热模块替换
+### 热更新/热替换/热模块替换
     [参考链接](https://fakefish.github.io/react-webpack-cookbook/Running-a-workflow.html,https://fakefish.github.io/react-webpack-cookbook/Automatic-browser-refresh.html)
 
  ```
@@ -20,16 +20,17 @@
    // ?方式二：添加<script src="http://localhost:8080/webpack-dev-server.js"></script>
  ```
 
-2. 文件输出路径与名称
+
+### 文件输出路径与名称
 	[name]表示图片文件的文件名
 	[ext]表示图片文件的扩展名
 	[hash]表示图片文件的哈希值
 
 
-## 代码拆分
+### 代码拆分code splitting 异步加载
 - 将一整个代码，拆分为块【chunks】,并根据需求加载代码块；
 
-## 使用
+#### 使用
 - 在代码库中定义拆分点；
 - amd 
 - 定义分割点的方式：
@@ -50,4 +51,31 @@ require.ensure(['a','b'],function(a,b){
 	
 });
 ```
+
+### 开发环境与生产环境
+- 开发环境
+    + 报错调试，日志查看,sourcemap
+
+- 生产环境
+    + 代码压缩
+
+- 配置这两种环境
+    + webpack.config.js
+    + webpack.config.prod.js
+
+
+### webpack业务代码与vendor代码的分割
+
+
+### webpack develop server
+
+
+
+### 配置分离
+- 当webpack配置文件变得臃肿时，我们可以将其查分开来
+- webpack-merge：将分离开来的文件进行合并
+
+
+### 代码块
+
 

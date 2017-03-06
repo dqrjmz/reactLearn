@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import 'antd/dist/antd.css';
-// import DatePicker from 'antd/DatePicker';
+import styles from '../css/cssModules/cssModeule.css'
+
 
 const MyMins={
 	componentWillMount(){
@@ -38,39 +38,24 @@ const MyComponent=React.createClass({
 	},
 	render(){
 		return (
-				<div>
-					<input type="text" name="username" defaultValue="jmz"  onChange={this.changeHandler} />
-					<textarea defaultValue="heh" onChange={this.changeHandlerInfo}></textarea>
-					<select defaultValue="B">
-						<option value="A">A</option>
-						<option value="B">B</option>
-						<option value="C">C</option>
-					</select>
-					<select multiple={true} defaultValue={['B', 'C']}>
-					    <option value="A">Apple</option>
-					    <option value="B">Banana</option>
-					    <option value="C">Cranberry</option>
-					  </select>
-					  <input type="checkbox" checked={this.state.checked} onChange={this.changeHandlerBox} />
+				<div className={styles.content}>
+					<div className={styles.header}>
+						header
+					</div>
+					<div className={styles.center}>
+						<div className={styles.left}>
+							left
+						</div>
+						
+						<div className={styles.right}>
+							right
+						</div>
+					</div>
 				</div>
 			);
-	},
-	changeHandler(ev){
-		ev.target.value=ev.target.value;
-		console.log(ev.target,ev.target.value);
-	},
-	changeHandlerInfo(ev){
-
-	},
-	changeHandlerBox(ev){
-		setTimeout(()=>{
-			this.setState({
-				checked:!this.state.checked
-			});
-		},100);
-		// ev.preventDefault();
 	}
 });
+
 
 MyComponent.methodFn1();
 
@@ -117,18 +102,8 @@ MyComponent.methodFn1();
 		
 // 	}
 // }
-// function Jsx(){
-// 	return (
-// 		<div>
-// 			<ul>
-// 				<li>jmz</li>
-// 			</ul>
-// 		</div>
-// 		);
-// }
 
-// var JsxA=Jsx();
-
-// console.log(JsxA);
 
  ReactDOM.render(<MyComponent />,document.querySelector('#app'));
+
+

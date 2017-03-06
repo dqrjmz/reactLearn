@@ -16,6 +16,7 @@
 
 - store：整个程序中的state的集合
     1. 创建store时，需要将通过combineReducers的根reducer函数传递进去；
+    2. ui状态和业务数据需要分开写 
 
 - subscribe:监听函数，当触发dispatch(action)时，触发；
 

@@ -17,64 +17,57 @@ var banner = pkg.name + pkg.description + 'Author:' + pkg.author + 'Version: v' 
 var babelpolyfill = require("babel-polyfill");
 // 提取公共脚本
 var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
-console.log(__dirname);
-
+// 打印日志
+var BellOnBundlerErrorPlugin = require('bell-on-bundler-error-plugin');
+// 使得css module中支持变量
+var values=require('postcss-modules-values');
 
 // 生成的文件路径相对于输出的路径
 module.exports = {
-   context:__dirname,
-    entry: ['webpack/hot/dev-server.js', 'webpack-dev-server/client?http://localhost:8080','./src/js/react.js'],
+    context: __dirname,
+    //entry: ['webpack/hot/dev-server.js', 'webpack-dev-server/client?http://localhost:8080','./src/js/react.js'],
+    entry: {
+        index: './src/js/react.js',
+        vendor: [
+            'react',
+            'react-dom'
+        ]
+    },
     //打包输出的文件
     output: {
         path: __dirname,
-        filename: "dist/js/bundle.js"
+        //打包后的文件访问目录
+        // publicPath: '/',
+        filename: "dist/js/[name].js"
     },
     // 加载器
     module: {
-         preLoaders: [
-            // Javascript
-            { test: /\.jsx?$/, 
+        preLoaders: [{
+                test: /\.jsx?$/,
                 loader: 'eslint'
             }
         ],
-        loaders: [
-            {
-                test: /\.js[x]?$/,
-                loaders: ['babel-loader','eslint-loader']
-            },
-            {
-                test: /\.(css|less)$/,
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader','less-loader')
-            },
-            {
-                test: /\.(png|jpg)$/,
-                loader: 'file-loader',
-                query:{
-                    limit:'8192',
-                    name:'./dist/img/[name].[ext]'
-                }
-            },
-            {
-                test: /\.(woff|woff2|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: 'file-loader',
-                query:{
-                    name:'./dist/fonts/[name].[ext]'
-                }
+        loaders: [{
+            test: /\.js[x]?$/,
+            loaders: ['babel-loader', 'eslint-loader']
+        }, {
+            test: /\.(css|less)$/,
+            loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&localIdentName=[name]__[local]-[hash:base64:5]&sourceMap=true','postcss-loader')
+        }, {
+            test: /\.(png|jpg)$/,
+            loader: 'file-loader',
+            query: {
+                limit: '8192',
+                name: './dist/img/[name].[ext]'
             }
-        ]
+        }, {
+            test: /\.(woff|woff2|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+            loader: 'file-loader',
+            query: {
+                name: './dist/fonts/[name].[ext]'
+            }
+        }]
     },
-    eslint: {
-        failOnWarning: false,
-        failOnError: true
-    },
-    // 省略文件类型
-    // 模块的简写
-    resolve: {
-        // 注意需要加  .jsx
-        extensions: ['', '.js', '.jsx', '.json', '.css','.less']
-    },
-    //源代码
-    devtool: 'source-map',
     // 配置插件
     plugins: [
         //自动生成html
@@ -94,19 +87,45 @@ module.exports = {
         new ExtractTextPlugin("dist/css/style.css"),
         //打开浏览器插件 
         new OpenBrowserPlugin({
-            url: 'http://localhost:8080/dist/html/main.html'
+            url: 'http://localhost:10000/dist/html/main.html'
         }),
+        // 打印日志
+        new BellOnBundlerErrorPlugin(),
         //给打包后的文档头部添加声明
         new webpack.BannerPlugin(banner),
         // 热替换
         new webpack.HotModuleReplacementPlugin(),
         //提取公用部分
-        new webpack.optimize.CommonsChunkPlugin('dist/js/common.js')
+        new webpack.optimize.CommonsChunkPlugin('vendor', 'dist/js/vendor.js')
     ],
-    postcss: function () {
-        return [precss, autoprefixer];
+    // 省略文件类型
+    // 模块的简写
+    resolve: {
+        // 注意需要加  .jsx
+        extensions: ['', '.js', '.jsx', '.json', '.css', '.less']
+    },
+    //源代码
+    devtool: 'source-map',
+    // js代码检测
+    eslint: {
+        configFile: './.eslintrc',
+        failOnWarning: false,
+        failOnError: true
+    },
+    // css文件处理
+    postcss: [
+        values,
+        precss, 
+        autoprefixer,
+    ],
+    //服务
+    devServer: {
+        hot: true, //自动刷新
+        inline: true, //模块热更新
+        contentBase: './', //服务的根路径
+        historyApiFallback: true, //启用对历史回退的支持
+        host: 'localhost',
+        // open:true,
+        port: 10000
     }
 }
-
-
-

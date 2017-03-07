@@ -9,5 +9,5 @@ web.config
 
 *.vscode
 
-src/js/workComponent
+
 src/css/*.css

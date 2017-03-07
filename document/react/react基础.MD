@@ -78,7 +78,8 @@ this.state.arrData.map(function (item, index) {
 })
 ```
 
-22. 在
+22. 在标签中自定义属性
+- data-attrname
 
 
 *****

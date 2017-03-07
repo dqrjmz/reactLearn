@@ -79,3 +79,7 @@ require.ensure(['a','b'],function(a,b){
 ### 代码块
 
 
+### resolve
+- reslove.alias配置参数，为文件目录配置别名
+
+

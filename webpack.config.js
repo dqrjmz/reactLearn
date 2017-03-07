@@ -96,13 +96,18 @@ module.exports = {
         // 热替换
         new webpack.HotModuleReplacementPlugin(),
         //提取公用部分
-        new webpack.optimize.CommonsChunkPlugin('vendor', 'dist/js/vendor.js')
+        new webpack.optimize.CommonsChunkPlugin('vendor', 'dist/js/vendor.js'),
+        //提供全局的变量，在模块中使用无需用require引入
+        new webpack.ProvidePlugin({page: "page"}),
     ],
     // 省略文件类型
     // 模块的简写
     resolve: {
         // 注意需要加  .jsx
-        extensions: ['', '.js', '.jsx', '.json', '.css', '.less']
+        extensions: ['', '.js', '.jsx', '.json', '.css', '.less'],
+        alias:{
+            page:'./src/lib/page.js'
+        }
     },
     //源代码
     devtool: 'source-map',

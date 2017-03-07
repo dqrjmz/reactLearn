@@ -60,8 +60,12 @@ var fn=(id)=>({
     id
 })
 fn() //{type:'a',id:id}
+
+const fn=()=>10; 直接返回
 ```
-```
+
+### Symbol
+```Symbol
 /**
  * Symbol()  
  * 1. 数据类型
@@ -73,9 +77,6 @@ fn() //{type:'a',id:id}
 const symbolVal=Symbol('jmz');
 // 此时的symbolVal就是一个Symbol类型的变量
 // 应用场景？
-
-
-
 
 /**
  * 遍历器

@@ -52,7 +52,8 @@ module.exports = {
             loaders: ['babel-loader', 'eslint-loader']
         }, {
             test: /\.(css|less)$/,
-            loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&localIdentName=[name]__[local]-[hash:base64:5]&sourceMap=true','postcss-loader')
+           // loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&localIdentName=[name]__[local]-[hash:base64:5]&sourceMap=true','postcss-loader')
+            loader: ExtractTextPlugin.extract('style-loader', 'css-loader','postcss-loader')
         }, {
             test: /\.(png|jpg)$/,
             loader: 'file-loader',
